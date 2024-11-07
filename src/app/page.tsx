@@ -1,14 +1,17 @@
 // import Image from "next/image";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={`${styles.main} container`}>
-        <Link href="/about">About? link</Link>
+    <div>
+      <main className="container">
+        <p>
+          I&apos;m a tech senior developer/tech lead now humbly offering my
+          services to the TTRPG community.
+        </p>
       </main>
-      <footer className={styles.footer}></footer>
+      <footer className="container"></footer>
     </div>
   );
 }

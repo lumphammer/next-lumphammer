@@ -28,6 +28,10 @@ function NavLink({ to, children }: LinkProps) {
 export default function Nav() {
   return (
     <nav>
+      <label className="menu-toggle">
+        Menu
+        <input type="checkbox" />
+      </label>
       <ul>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
