@@ -1,12 +1,12 @@
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Link href="/about">About</Link>
+      <main className={`${styles.main} container`}>
+        <Link href="/about">About? link</Link>
       </main>
       <footer className={styles.footer}></footer>
     </div>

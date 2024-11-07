@@ -1,0 +1,47 @@
+@use "@picocss/pico";
+@use "@picocss/pico/scss/colors" as *;
+
+/* Light color scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-primary: #{$red-500};
+}
+
+/* Orange color for dark color scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    $foo: #f56b3d;
+    --pico-text-selection-color: #{$red-750};
+    --pico-primary: #{$red-500};
+    --pico-primary-background: #{$foo};
+    --pico-primary-underline: #{$red-450};
+    --pico-primary-hover: #{$red-550};
+    --pico-primary-hover-background: #{$red-550};
+    --pico-primary-focus: rgba(245, 107, 61, 0.375);
+    --pico-primary-inverse: #fff;
+  }
+}
+
+a[aria-current] {
+  color: var(--pico-text);
+  font-weight: bold;
+}
+
+body > header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // background-color: #{$pink-950};
+}
+
+body > header .container > div {
+  // margin: calc(var(--pico-spacing) * -0.125) calc(var(--pico-spacing) * -0.25);
+  // padding: calc(var(--pico-spacing) * 0.125) calc(var(--pico-spacing) * 0.25);
+  // margin-top: var(--pico-spacing);
+  // background-color: #{$red-450};
+  color: #{$pink-50};
+  // padding: var(--pico-spacing);
+  // border-radius: var(--pico-border-radius);
+}
