@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./main.scss";
-// import Link from "next/link";
-import Nav from "@/components/Nav";
+import { Navigation } from "@/components/Navigation";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -31,7 +30,7 @@ export default function RootLayout({
         <header>
           <div className="container">
             <div>Lumphammer</div>
-            <Nav />
+            <Navigation />
           </div>
         </header>
         {children}
