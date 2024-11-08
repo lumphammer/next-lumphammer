@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [fadingOut, setFadingOut] = useState(false);
 
   // Handle window resize
   useEffect(() => {
@@ -23,21 +24,33 @@ export function Navigation() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
+  const handleClick = useCallback(() => {
+    if (isOpen) {
+      setFadingOut(true);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 300);
+    } else {
+      setFadingOut(false);
+      setIsOpen(true);
+    }
+  }, [isOpen]);
+
   const links = (
     <>
-      <Link href="/" onClick={() => setIsOpen(false)}>
+      <Link href="/" onClick={handleClick}>
         Home
       </Link>
-      <Link href="/about" onClick={() => setIsOpen(false)}>
+      <Link href="/about" onClick={handleClick}>
         About
       </Link>
-      <Link href="/todo" onClick={() => setIsOpen(false)}>
+      <Link href="/todo" onClick={handleClick}>
         Todo
       </Link>
-      <Link href="/portfolio" onClick={() => setIsOpen(false)}>
+      <Link href="/portfolio" onClick={handleClick}>
         Portfolio
       </Link>
-      <Link href="/contact" onClick={() => setIsOpen(false)}>
+      <Link href="/contact" onClick={handleClick}>
         Contact
       </Link>
     </>
@@ -51,7 +64,7 @@ export function Navigation() {
       {/* Mobile Hamburger Button */}
       {isMobile && (
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onMouseDown={handleClick}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
         >
@@ -63,7 +76,11 @@ export function Navigation() {
 
       {/* Mobile Popover Menu */}
       {isMobile && isOpen && (
-        <div className="mobile-menu" role="dialog" aria-modal="true">
+        <div
+          className={`mobile-menu ${fadingOut ? "fade-out" : ""}`}
+          role="dialog"
+          aria-modal="true"
+        >
           <div className="mobile-menu-content">{links}</div>
         </div>
       )}

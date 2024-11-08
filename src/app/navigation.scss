@@ -1,5 +1,6 @@
 // nav stuff from ai:
 @use "@picocss/pico/scss/colors" as *;
+@use "sass:color";
 
 nav {
   position: relative;
@@ -45,10 +46,15 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    // background: white;
-    backdrop-filter: blur(10px);
-    z-index: 5;
+    backdrop-filter: blur(50px);
+    background: var(--lumphammer-menu-background); //
+    z-index: 5; //
     animation: slideIn 0.3s ease-out;
+    &.fade-out {
+      animation: fadeOut 300ms ease-out;
+      animation-fill-mode: forwards;
+      pointer-events: none;
+    }
   }
 
   .mobile-menu-content {
@@ -67,6 +73,14 @@ nav {
     transform: translateY(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

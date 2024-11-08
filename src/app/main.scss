@@ -7,7 +7,9 @@
 /* Can be forced with data-theme="light" */
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  --pico-primary: #{$red-500};
+  // --pico-primary: #{$red-500};
+  --pico-background-color: #{$sand-50};
+  --lumphammer-menu-background: #{$sand-50}77;
 }
 
 /* Orange color for dark color scheme (Auto) */
@@ -22,6 +24,8 @@
     --pico-primary-hover-background: #{$red-550};
     --pico-primary-focus: rgba(245, 107, 61, 0.375);
     --pico-primary-inverse: #fff;
+    --pico-background-color: #{$sand-950};
+    --lumphammer-menu-background: #{$sand-950}cc;
   }
 }
 
