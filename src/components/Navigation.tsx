@@ -38,19 +38,19 @@ export function Navigation() {
 
   const links = (
     <>
-      <Link href="/" onClick={handleClick}>
+      <Link href="/" onMouseDown={handleClick}>
         Home
       </Link>
-      <Link href="/about" onClick={handleClick}>
+      <Link href="/about" onMouseDown={handleClick}>
         About
       </Link>
-      <Link href="/todo" onClick={handleClick}>
+      <Link href="/todo" onMouseDown={handleClick}>
         Todo
       </Link>
-      <Link href="/portfolio" onClick={handleClick}>
+      <Link href="/portfolio" onMouseDown={handleClick}>
         Portfolio
       </Link>
-      <Link href="/contact" onClick={handleClick}>
+      <Link href="/contact" onMouseDown={handleClick}>
         Contact
       </Link>
     </>
