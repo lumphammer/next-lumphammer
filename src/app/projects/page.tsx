@@ -1,7 +1,7 @@
 export default function Portfolio() {
   return (
     <main className="container">
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
 
       <div className="grid">
         {projects.map((project) => (

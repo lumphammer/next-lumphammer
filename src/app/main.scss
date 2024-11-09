@@ -38,7 +38,7 @@
   --pico-primary-underline: #{$cyan-450};
   --pico-primary-hover: #{$cyan-550};
   --pico-primary-hover-background: #{$cyan-550};
-  --pico-primary-focus: rgba(245, 107, 61, 0.375);
+  --pico-primary-focus: #{$cyan-550};
   --pico-primary-inverse: #fff;
   --pico-background-color: #{$sand-900};
   --lumphammer-menu-background: #{$sand-950}cc;
@@ -46,6 +46,10 @@
   --lumphammer-logo-filter: drop-shadow(0 0 0.5em var(--pico-primary));
   --lumphammer-logo-svg-color: #{$cyan-50};
   --lumphammer-logo-text-color: white;
+  // --pico-box-shadow: 0 0 0.5em var(--pico-primary);
+  button:focus {
+    --pico-box-shadow: 0 0 2em #{$cyan-350};
+  }
 }
 
 @media only screen and (prefers-color-scheme: dark) {

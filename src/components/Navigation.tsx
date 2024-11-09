@@ -47,11 +47,11 @@ export function Navigation() {
       <Link href="/about" onMouseDown={handleLinkClick}>
         About
       </Link>
-      <Link href="/todo" onMouseDown={handleLinkClick}>
+      {/* <Link href="/todo" onMouseDown={handleLinkClick}>
         Todo
-      </Link>
-      <Link href="/portfolio" onMouseDown={handleLinkClick}>
-        Portfolio
+      </Link> */}
+      <Link href="/projects" onMouseDown={handleLinkClick}>
+        Projects
       </Link>
       <Link href="/contact" onMouseDown={handleLinkClick}>
         Contact
