@@ -58,6 +58,13 @@
   }
 }
 
+h1 {
+  background: linear-gradient(to right, oklch(65% 0.2 200), oklch(65% 0.2 20));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 [data-theme="dark"] {
   @include dark-scheme;
 }
