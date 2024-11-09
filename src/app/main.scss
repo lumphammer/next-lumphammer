@@ -3,15 +3,23 @@
 
 @use "./navigation.scss";
 
-/* Light color scheme (Default) */
-/* Can be forced with data-theme="light" */
+// Light color scheme (Default)
+// Can be forced with data-theme="light"
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   // --pico-primary: #{$red-500};
   --pico-background-color: #{$sand-50};
   --lumphammer-menu-background: #{$sand-50}77;
+  --lumphammer-color: #{$sand-950};
+  --pico-color: var(--lumphammer-color);
+  --pico-primary-inverse: #{$sand-50};
+  --pico-primary: #{$cyan-500};
+  --pico-primary-background: #{$cyan-550};
+  --pico-primary-focus: #{$cyan-450};
+  --pico-primary-hover-background: #{$cyan-450};
 }
 
+// dark color scheme
 @mixin dark-scheme {
   --pico-text-selection-color: #{$red-750};
   --pico-primary: #{$red-500};
@@ -23,6 +31,7 @@
   --pico-primary-inverse: #fff;
   --pico-background-color: #{$sand-950};
   --lumphammer-menu-background: #{$sand-950}cc;
+  --lumphammer-color: #{$sand-50};
 }
 
 @media only screen and (prefers-color-scheme: dark) {

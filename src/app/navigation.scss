@@ -31,7 +31,10 @@ nav {
     cursor: pointer;
     padding: 0;
     z-index: 10;
-    --pico-color: white;
+    --pico-color: var(--lumphammer-color);
+    &:is(:hover, :active, :focus) {
+      --pico-color: var(--lumphammer-color);
+    }
     span {
       width: 2rem;
       height: 0.25rem;
