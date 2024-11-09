@@ -31,9 +31,9 @@ export default function RootLayout({
       <body>
         <header>
           <div className="container">
-            <div>
+            <div className="logotype">
               <Logo width={50} />
-              Lumphammer
+              <span>Lumphammer</span>
             </div>
             <Navigation />
           </div>

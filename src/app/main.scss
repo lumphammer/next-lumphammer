@@ -3,6 +3,8 @@
 
 @use "./navigation.scss";
 
+@import "../../public/fonts/AlfaSlabOne-Regular/stylesheet.css";
+
 // Light color scheme (Default)
 // Can be forced with data-theme="light"
 [data-theme="light"],
@@ -17,6 +19,9 @@
   --pico-primary-background: #{$cyan-550};
   --pico-primary-focus: #{$cyan-450};
   --pico-primary-hover-background: #{$cyan-450};
+  --lumphammer-logo-filter: drop-shadow(0.2em 0.2em 0.2em #0007);
+  --lumphammer-logo-svg-color: #{$cyan-700};
+  --lumphammer-logo-text-color: #{$cyan-600};
 }
 
 // dark color scheme
@@ -32,6 +37,9 @@
   --pico-background-color: #{$sand-950};
   --lumphammer-menu-background: #{$sand-950}cc;
   --lumphammer-color: #{$sand-50};
+  --lumphammer-logo-filter: drop-shadow(0 0 0.5em var(--pico-primary));
+  --lumphammer-logo-svg-color: #{$red-100};
+  --lumphammer-logo-text-color: white;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -53,4 +61,13 @@ body > header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logotype {
+  font-family: "Alfa Slab One", serif;
+  filter: var(--lumphammer-logo-filter);
+  color: var(--lumphammer-logo-text-color);
+  svg {
+    fill: var(--lumphammer-logo-svg-color);
+  }
 }
