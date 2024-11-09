@@ -2,6 +2,8 @@
 @use "@picocss/pico/scss/colors" as *;
 @use "sass:color";
 
+$breakpoint: 768px;
+
 nav {
   position: relative;
   display: flex;
@@ -14,7 +16,7 @@ nav {
   /* Desktop Navigation */
   .desktop-nav {
     display: none;
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       display: flex;
       gap: 2rem;
     }
@@ -35,6 +37,10 @@ nav {
     &:is(:hover, :active, :focus) {
       --pico-color: var(--lumphammer-color);
     }
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+
     span {
       width: 2rem;
       height: 0.25rem;

@@ -1,41 +1,28 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [fadingOut, setFadingOut] = useState(false);
 
-  // Handle window resize
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-      if (window.innerWidth >= 768) {
-        setIsOpen(false);
-      }
-    };
-
-    // Initial check
-    checkScreenSize();
-
-    window.addEventListener("resize", checkScreenSize);
-    return () => window.removeEventListener("resize", checkScreenSize);
+  const closeMenu = useCallback(() => {
+    setFadingOut(true);
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 300);
   }, []);
 
-  const handleClick = useCallback(() => {
+  const handleMenuButtonClick = useCallback(() => {
     if (isOpen) {
-      setFadingOut(true);
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 300);
+      closeMenu();
     } else {
       setFadingOut(false);
       setIsOpen(true);
     }
-  }, [isOpen]);
+  }, [isOpen, closeMenu]);
 
   const router = useRouter();
 
@@ -45,11 +32,11 @@ export function Navigation() {
   const handleLinkClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>) => {
       e.preventDefault();
-      handleClick();
+      closeMenu();
       //navigate to the link
       router.push(e.currentTarget.href);
     },
-    [handleClick, router]
+    [closeMenu, router]
   );
 
   const links = (
@@ -78,20 +65,18 @@ export function Navigation() {
       <div className="desktop-nav">{links}</div>
 
       {/* Mobile Hamburger Button */}
-      {isMobile && (
-        <button
-          onMouseDown={handleClick}
-          aria-expanded={isOpen}
-          aria-label="Toggle navigation menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      )}
+      <button
+        onMouseDown={handleMenuButtonClick}
+        aria-expanded={isOpen}
+        aria-label="Toggle navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       {/* Mobile Popover Menu */}
-      {isMobile && isOpen && (
+      {isOpen && (
         <div
           className={`mobile-menu ${fadingOut ? "fade-out" : ""}`}
           role="dialog"
