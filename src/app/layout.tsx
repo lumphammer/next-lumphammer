@@ -33,7 +33,7 @@ export default function RootLayout({
           <div className="container">
             <div className="logotype">
               <Logo width={50} />
-              <span>Lumphammer</span>
+              <div className="text">Lumphammer</div>
             </div>
             <Navigation />
           </div>
