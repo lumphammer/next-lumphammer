@@ -19,7 +19,8 @@
   --pico-primary-background: #{$cyan-550};
   --pico-primary-focus: #{$cyan-450};
   --pico-primary-hover-background: #{$cyan-450};
-  --lumphammer-logo-filter: drop-shadow(0.2em 0.2em 0.2em #0007);
+  --lumphammer-logo-filter: drop-shadow(0.05em 0.05em 0.05em #fff)
+    drop-shadow(0.1em 0.1em 0.1em #0004);
   --lumphammer-logo-svg-color: #{$cyan-700};
   --lumphammer-logo-text-color: #{$cyan-600};
 }
@@ -67,6 +68,16 @@ body > header > .container {
   font-family: "Alfa Slab One", serif;
   filter: var(--lumphammer-logo-filter);
   color: var(--lumphammer-logo-text-color);
+  // background-color: pink;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+  span {
+    // background-color: yellow;
+    margin: 0;
+    text-transform: uppercase;
+  }
   svg {
     fill: var(--lumphammer-logo-svg-color);
   }
