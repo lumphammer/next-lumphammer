@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,21 +37,36 @@ export function Navigation() {
     }
   }, [isOpen]);
 
+  const router = useRouter();
+
+  // we're reacting on mousedown because theo said so, which means we need some
+  // extra magic to navigate (if we wait for the click to fire it never does
+  // because the menu gets closed before the click event fires.)
+  const handleLinkClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      handleClick();
+      //navigate to the link
+      router.push(e.currentTarget.href);
+    },
+    [handleClick, router]
+  );
+
   const links = (
     <>
-      <Link href="/" onMouseDown={handleClick}>
+      <Link href="/" onMouseDown={handleLinkClick}>
         Home
       </Link>
-      <Link href="/about" onMouseDown={handleClick}>
+      <Link href="/about" onMouseDown={handleLinkClick}>
         About
       </Link>
-      <Link href="/todo" onMouseDown={handleClick}>
+      <Link href="/todo" onMouseDown={handleLinkClick}>
         Todo
       </Link>
-      <Link href="/portfolio" onMouseDown={handleClick}>
+      <Link href="/portfolio" onMouseDown={handleLinkClick}>
         Portfolio
       </Link>
-      <Link href="/contact" onMouseDown={handleClick}>
+      <Link href="/contact" onMouseDown={handleLinkClick}>
         Contact
       </Link>
     </>
