@@ -4,6 +4,11 @@
 @use "./navigation.scss";
 
 @import "../../public/fonts/AlfaSlabOne-Regular/stylesheet.css";
+@import "../../public/fonts/Geist/stylesheet.css";
+
+:root {
+  font-family: "Geist", sans-serif;
+}
 
 // Light color scheme (Default)
 // Can be forced with data-theme="light"
