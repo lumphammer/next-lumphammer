@@ -34,7 +34,7 @@
 
 // dark color scheme
 @mixin dark-scheme {
-  --pico-text-selection-color: #{$cyan-750};
+  --pico-text-selection-color: #{$cyan-350}44;
   --pico-primary: #{$cyan-400};
   --pico-primary-background: #{$cyan-450};
   --pico-primary-underline: #{$cyan-450};
@@ -62,12 +62,38 @@
 }
 
 h1 {
-  background: linear-gradient(to right, oklch(65% 0.2 200), oklch(65% 0.1 20));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: var(--lumphammer-h1-filter);
   width: fit-content;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  mark {
+    background: linear-gradient(
+      to right,
+      oklch(65% 0.2 200),
+      oklch(65% 0.1 20)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: var(--lumphammer-h1-filter);
+    padding: 0;
+  }
+  // mark {
+  //   // background: var(--pico-mark-gradient);
+  //   background: linear-gradient(
+  //     to right,
+  //     oklch(65% 0.2 200),
+  //     oklch(65% 0.1 20)
+  //   );
+  //   -webkit-background-clip: text;
+  //   background-clip: text;
+  //   color: transparent;
+  // }
 }
 
 [data-theme="dark"] {
@@ -100,5 +126,31 @@ body > header > .container {
   }
   svg {
     fill: var(--lumphammer-logo-svg-color);
+  }
+}
+
+.about-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: flex-start;
+  img {
+    flex: 1;
+    border: 0.5em solid var(--pico-color);
+    min-width: 10rem;
+  }
+  & > div {
+    flex: 2;
+    min-width: min(30rem, 100%);
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    & > div {
+      width: 100%;
+    }
   }
 }

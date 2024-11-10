@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
       <main className="container">
-        <h1>Bespoke software development for the TTRPG industry</h1>
+        <h1>
+          <mark>Bespoke software development for the TTRPG industry</mark>
+        </h1>
         <p>
           Hi! We&apos;re a husband & wife team providing our wibble wibble blob.
         </p>

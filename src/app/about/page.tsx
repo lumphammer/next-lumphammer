@@ -1,42 +1,57 @@
 import Image from "next/image";
+import neil_and_romi from "./neil_and_romi.jpg";
 
 export default function About() {
   return (
     <>
       <main className="container">
-        <h1>About</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <Image
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-          width={2000}
-          height={1333}
-          alt="Husband and wife team collaborating at desk"
-          className="about-image"
-        />
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-        </p>
-        <Image
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
-          width={2000}
-          height={1333}
-          alt="Desk with computer monitors showing code"
-          className="about-image"
-        />
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo.
-        </p>
+        <h1>
+          <mark>All About Us</mark>
+        </h1>
+        <h2>Neil</h2>
+        <section className="about-section">
+          <div>
+            <p>
+              Neil got roped into a red-box D&D game one rainy lunchtime at
+              school in the 1980s and never really got over it. TTRPGs have been
+              a constant in his life ever since.
+            </p>
+            <p>
+              <em>But</em> it turns out he had more than one nerdish obsession,
+              and the other one, computers, offered better pay. So he bounced
+              around bunch of roles (sysadmin, tech writer, graphic designer)
+              before becoming a full-time developer in the mid-noughties.
+            </p>
+            <p>
+              He&apos;s been a professional developer ever since, working with
+              startups and established companies alike, and has never stopped
+              playing TTRPGs.
+            </p>
+            <p>Neil lives alone with his wife Jade, and two cats.</p>
+          </div>
+
+          <Image src={neil_and_romi} alt="Neil and Romi" />
+        </section>
+
+        <hr />
+        <h2>Jade</h2>
+        <section className="about-section">
+          <div>
+            <p>
+              Jade has never played a single TTRPG in her entire life, but she
+              has many useful skills, including putting up with Neil,
+              proofreading, and admin.
+            </p>
+            <p>Jade lives alone with her husband Neil, and two cats.</p>
+          </div>
+          <Image
+            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+            width={2000}
+            height={1333}
+            alt="Desk with computer monitors showing code"
+            className="about-image"
+          />
+        </section>
       </main>
     </>
   );
