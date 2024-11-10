@@ -35,7 +35,7 @@
 // dark color scheme
 @mixin dark-scheme {
   --pico-text-selection-color: #{$cyan-750};
-  --pico-primary: #{$cyan-500};
+  --pico-primary: #{$cyan-400};
   --pico-primary-background: #{$cyan-450};
   --pico-primary-underline: #{$cyan-450};
   --pico-primary-hover: #{$cyan-550};
