@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <>
@@ -9,8 +11,10 @@ export default function About() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
+          width={2000}
+          height={1333}
           alt="Husband and wife team collaborating at desk"
           className="about-image"
         />
@@ -20,8 +24,10 @@ export default function About() {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+          width={2000}
+          height={1333}
           alt="Desk with computer monitors showing code"
           className="about-image"
         />
