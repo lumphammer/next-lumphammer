@@ -4,15 +4,15 @@ export default function Portfolio() {
       <h1>Projects</h1>
 
       <div className="grid">
-        {projects.map((project) => (
-          <div key={project.title}>
+        {projects.map((project, index) => (
+          <div key={index}>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <div>
+            <ul>
               {project.technologies.map((tech) => (
-                <span key={tech}>{tech}</span>
+                <li key={tech}>{tech}</li>
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
@@ -22,15 +22,28 @@ export default function Portfolio() {
 
 const projects = [
   {
-    title: "Project One",
+    title: "GUMSHOE for Foundry VTT",
     description:
-      "A brief description of your first project and what it accomplishes.",
-    technologies: ["React", "TypeScript", "Node.js"],
+      "A system implementation of the GUMSHOE investigative roleplaying game system for the Foundry Virtual Tabletop platform. Features character sheets, skill tests, and resource tracking.",
+    technologies: ["Foundry VTT", "React", "TypeScript"],
   },
   {
-    title: "Project Two",
-    description: "Description of another project showcasing different skills.",
-    technologies: ["Next.js", "Tailwind", "PostgreSQL"],
+    title: "Trail of Cthulhu 2nd Edition for Foundry VTT",
+    description:
+      "A system implementation of the Trail of Cthulhu 2nd Edition roleplaying game system for the Foundry Virtual Tabletop platform. Features character sheets, skill tests, and resource tracking.",
+    technologies: ["Foundry VTT", "React", "TypeScript"],
+  },
+  {
+    title: "This Website?",
+    description:
+      "A static website built with Next.js and PicoCSS. Features a portfolio, and contact form.",
+    technologies: ["Next.js", "PicoCSS"],
+  },
+  {
+    title: "Pub Crusade for Foundry VTT",
+    description:
+      "A system implementation of the Pub Crusade roleplaying game system for the Foundry Virtual Tabletop platform. Features character sheets, skill tests, and resource tracking.",
+    technologies: ["Foundry VTT", "React", "TypeScript"],
   },
   // Add more projects as needed
 ];
