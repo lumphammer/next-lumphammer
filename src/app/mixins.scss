@@ -1,0 +1,55 @@
+// mixin magic here...
+//
+// use these like this:
+//
+// @use "./mixins" as *;
+//
+// @include light-theme(&) {
+//   color: lightblue;
+// }
+//
+// @include dark-theme(&) {
+//   color: darkgrey;
+// }
+//
+// note how we pass in the current selector (&) as an aargument to the mixin.
+
+// light theme mixin - you can @include this from anywhere in your styles like
+// a normal mixin
+@mixin light-theme($selector) {
+  // but what's this? everything gets rendered at the root level instead of
+  // being nested down to the component level?
+  @at-root {
+    // yep - so we can select for the light theme at the root element
+    [data-theme="light"],
+    :root:not([data-theme="dark"]) {
+      // and now we can use the selector passed in to the mixin to target the
+      // element we want to style
+      #{$selector} {
+        // and the body passed in to the mixin is the styles we want to apply
+        @content;
+      }
+    }
+  }
+}
+
+// dark theme mixin - same as above but for dark theme
+@mixin dark-theme($selector) {
+  @at-root {
+    // here we use the @content block twice because we need to render the styles
+    // using an @media query and then again using the [data-theme="dark"]
+    // selector
+    @media only screen and (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        #{$selector} {
+          @content;
+        }
+      }
+    }
+    [data-theme="dark"] {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+}

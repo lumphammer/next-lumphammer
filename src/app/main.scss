@@ -1,4 +1,3 @@
-@use "@picocss/pico";
 @use "@picocss/pico/scss/colors" as *;
 
 @use "./navigation.scss";
@@ -61,6 +60,10 @@
   }
 }
 
+[data-theme="dark"] {
+  @include dark-scheme;
+}
+
 h1 {
   width: fit-content;
 }
@@ -83,21 +86,6 @@ h6 {
     filter: var(--lumphammer-h1-filter);
     padding: 0;
   }
-  // mark {
-  //   // background: var(--pico-mark-gradient);
-  //   background: linear-gradient(
-  //     to right,
-  //     oklch(65% 0.2 200),
-  //     oklch(65% 0.1 20)
-  //   );
-  //   -webkit-background-clip: text;
-  //   background-clip: text;
-  //   color: transparent;
-  // }
-}
-
-[data-theme="dark"] {
-  @include dark-scheme;
 }
 
 a[aria-current] {
@@ -109,6 +97,10 @@ body > header > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+article {
+  --pico-border-radius: 0.5em;
 }
 
 .logotype {
@@ -126,31 +118,5 @@ body > header > .container {
   }
   svg {
     fill: var(--lumphammer-logo-svg-color);
-  }
-}
-
-.about-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1em;
-  align-items: flex-start;
-  img {
-    flex: 1;
-    border: 0.5em solid var(--pico-color);
-    min-width: 10rem;
-  }
-  & > div {
-    flex: 2;
-    min-width: min(30rem, 100%);
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    img {
-      width: 100%;
-    }
-    & > div {
-      width: 100%;
-    }
   }
 }

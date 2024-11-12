@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "@/app/globals.css";
+import "@/app/pico.scss";
 import "@/app/main.scss";
 import { Navigation } from "@/components/Navigation";
 import Logo from "@/assets/Logo.svg";

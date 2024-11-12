@@ -1,0 +1,25 @@
+.aboutSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: flex-start;
+  img {
+    flex: 1;
+    border: 0.5em solid var(--pico-color);
+    min-width: 10rem;
+  }
+  & > div {
+    flex: 2;
+    min-width: min(30rem, 100%);
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    & > div {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use "../mixins" as *;
+@use "@picocss/pico/scss/colors" as *;
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+
+  article {
+    border: 1px solid var(--pico-border);
+    margin: 0;
+    border-radius: 0.2em;
+
+    @include light-theme(&) {
+      background-color: #{$zinc-50};
+      box-shadow: 0 0.1em 1em #{$cyan-800}22 inset, 0 0.1em 1em #{$cyan-800}22;
+      border: 1px solid #{$sand-200};
+    }
+    @include dark-theme(&) {
+      background-color: #{$sand-800};
+      box-shadow: -0.1em -0.1em 0.7em #{$cyan-400},
+        0.1em 0.1em 0.7em #{$fuchsia-400};
+      border: 1px solid #fff5;
+    }
+  }
+}

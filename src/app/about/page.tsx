@@ -1,5 +1,6 @@
 import Image from "next/image";
 import neil_and_romi from "./neil_and_romi.jpg";
+import styles from "./about.module.scss";
 
 export default function About() {
   return (
@@ -9,11 +10,11 @@ export default function About() {
           <mark>All About Us</mark>
         </h1>
         <h2>Neil</h2>
-        <section className="about-section">
+        <section className={styles.aboutSection}>
           <div>
             <p>
               Neil got roped into a red-box D&D game one rainy lunchtime at
-              school in the 1980s and never really got over it. TTRPGs have been
+              school in the 1980s and never quite got over it. TTRPGs have been
               a constant in his life ever since.
             </p>
             <p>
@@ -35,7 +36,7 @@ export default function About() {
 
         <hr />
         <h2>Jade</h2>
-        <section className="about-section">
+        <section className={styles.aboutSection}>
           <div>
             <p>
               Jade has never played a single TTRPG in her entire life, but she

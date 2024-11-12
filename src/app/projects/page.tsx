@@ -1,19 +1,23 @@
+import styles from "./projects.module.scss";
+
 export default function Portfolio() {
   return (
     <main className="container">
       <h1>Projects</h1>
 
-      <div className="grid">
+      <div className={styles.grid}>
         {projects.map((project, index) => (
-          <div key={index}>
-            <h2>{project.title}</h2>
+          <article key={index}>
+            <h2>
+              <mark>{project.title}</mark>
+            </h2>
             <p>{project.description}</p>
             <ul>
               {project.technologies.map((tech) => (
                 <li key={tech}>{tech}</li>
               ))}
             </ul>
-          </div>
+          </article>
         ))}
       </div>
     </main>
