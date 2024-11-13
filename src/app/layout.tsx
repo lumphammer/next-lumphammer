@@ -30,9 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <svg width="0" height="0" viewBox="0 0 600 200">
+        <svg
+          width="0"
+          height="0"
+          viewBox="0 0 600 200"
+          style={{ display: "none" }}
+        >
           <defs>
-            <filter id="dropshadow">
+            <filter id="soft-focus">
               <feGaussianBlur
                 in="SourceGraphic"
                 result="blurOut"
@@ -44,23 +49,6 @@ export default function RootLayout({
                 in="SourceGraphic"
                 in2="blurOut"
                 result="final"
-              />
-            </filter>
-            <filter id="gradient-overlay">
-              <feImage
-                href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDI9IjEiPjxzdG9wIHN0b3AtY29sb3I9InZhcigtLWx1bXBoYW1tZXItbWFyay1jb2xvci0xKSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0idmFyKC0tbHVtcGhhbW1lci1tYXJrLWNvbG9yLTIpIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2cpIi8+PC9zdmc+"
-                x="0"
-                y="0"
-                width="100%"
-                height="100%"
-                preserveAspectRatio="none"
-                result="gradient"
-              />
-              <feBlend
-                mode="overlay"
-                in="SourceGraphic"
-                in2="gradient"
-                result="gradientOverlay"
               />
             </filter>
           </defs>

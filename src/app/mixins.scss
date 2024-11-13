@@ -12,7 +12,7 @@
 //   color: darkgrey;
 // }
 //
-// note how we pass in the current selector (&) as an aargument to the mixin.
+// note how we pass in the current selector (&) as an argument to the mixin.
 
 // light theme mixin - you can @include this from anywhere in your styles like
 // a normal mixin
@@ -21,15 +21,29 @@
   // being nested down to the component level?
   @at-root {
     // yep - so we can select for the light theme at the root element
-    [data-theme="light"],
-    :root:not([data-theme="dark"]) {
-      // and now we can use the selector passed in to the mixin to target the
-      // element we want to style
+
+    @media only screen and (prefers-color-scheme: light) {
+      :root:not([data-theme]) {
+        #{$selector} {
+          @content;
+        }
+      }
+    }
+    [data-theme="light"] {
       #{$selector} {
-        // and the body passed in to the mixin is the styles we want to apply
         @content;
       }
     }
+
+    // [data-theme="light"],
+    // :root:not([data-theme="dark"]) {
+    //   // and now we can use the selector passed in to the mixin to target the
+    //   // element we want to style
+    //   #{$selector} {
+    //     // and the body passed in to the mixin is the styles we want to apply
+    //     @content;
+    //   }
+    // }
   }
 }
 

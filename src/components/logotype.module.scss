@@ -4,7 +4,10 @@
 .logotype {
   font-family: "Alfa Slab One", serif;
   filter: var(--lumphammer-logo-filter);
-  // color: var(--lumphammer-logo-text-color);
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
 
   @include light-theme(&) {
     filter: drop-shadow(0.05em 0.05em 0.05em #fff)
@@ -17,10 +20,6 @@
     --lumphammer-logo-svg-color: #{$cyan-50};
     color: white;
   }
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  align-items: center;
   svg {
     fill: var(--lumphammer-logo-svg-color);
   }

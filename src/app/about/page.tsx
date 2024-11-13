@@ -7,11 +7,11 @@ export default function About() {
     <>
       <main className="container">
         <h1>About Us</h1>
-        <h2>
-          <mark>Neil</mark>
-        </h2>
         <section className={styles.aboutSection}>
           <div>
+            <h2>
+              <mark>Neil</mark>
+            </h2>
             <p>
               Neil got roped into a red-box D&D game one rainy lunchtime at
               school in the 1980s and never quite got over it. TTRPGs have been
