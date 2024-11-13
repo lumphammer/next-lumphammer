@@ -1,4 +1,5 @@
 @use "@picocss/pico/scss/colors" as *;
+@use "./mixins.scss" as *;
 
 @use "./navigation.scss";
 
@@ -9,11 +10,7 @@
   font-family: "Geist", sans-serif;
 }
 
-// Light color scheme (Default)
-// Can be forced with data-theme="light"
-[data-theme="light"],
-:root:not([data-theme="dark"]) {
-  // --pico-primary: #{$red-500};
+@include light-theme("&") {
   --pico-background-color: #{$sand-50};
   --lumphammer-menu-background: #{$sand-50}77;
   --lumphammer-color: #{$sand-950};
@@ -23,18 +20,17 @@
   --pico-primary-background: #{$cyan-550};
   --pico-primary-focus: #{$cyan-450};
   --pico-primary-hover-background: #{$cyan-450};
+  //
   --lumphammer-logo-filter: drop-shadow(0.05em 0.05em 0.05em #fff)
     drop-shadow(0.1em 0.1em 0.1em #0004);
   --lumphammer-logo-svg-color: #{$cyan-700};
   --lumphammer-logo-text-color: #{$cyan-600};
-  --lumphammer-h1-filter: drop-shadow(0.05em 0.05em 0.05em white)
-    drop-shadow(0.07em 0.07em 0.07em oklch(25% 0.2 200/ 0.2));
+  //
   --lumphammer-mark-color-1: #{$cyan-500};
   --lumphammer-mark-color-2: #{$fuchsia-500};
 }
 
-// dark color scheme
-@mixin dark-scheme {
+@include dark-theme("&") {
   --pico-text-selection-color: #{$cyan-350}44;
   --pico-primary: #{$cyan-400};
   --pico-primary-background: #{$cyan-450};
@@ -50,22 +46,11 @@
   --lumphammer-logo-svg-color: #{$cyan-50};
   --lumphammer-logo-text-color: white;
   // --pico-box-shadow: 0 0 0.5em var(--pico-primary);
-  --lumphammer-h1-filter: drop-shadow(0 0 0.4em oklch(95% 0.4 200/ 0.5));
   --lumphammer-mark-color-1: #{$cyan-300};
   --lumphammer-mark-color-2: #{$fuchsia-300};
   button:focus {
     --pico-box-shadow: 0 0 2em #{$cyan-350};
   }
-}
-
-@media only screen and (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    @include dark-scheme;
-  }
-}
-
-[data-theme="dark"] {
-  @include dark-scheme;
 }
 
 h1 {
@@ -108,22 +93,4 @@ body > header > .container {
 
 article {
   --pico-border-radius: 0.5em;
-}
-
-.logotype {
-  font-family: "Alfa Slab One", serif;
-  filter: var(--lumphammer-logo-filter);
-  color: var(--lumphammer-logo-text-color);
-  // background-color: pink;
-  display: flex;
-  flex-direction: row;
-  gap: 0.5em;
-  align-items: center;
-  .text {
-    margin: 0;
-    text-transform: uppercase;
-  }
-  svg {
-    fill: var(--lumphammer-logo-svg-color);
-  }
 }

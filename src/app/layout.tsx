@@ -4,7 +4,7 @@ import "@/app/globals.css";
 import "@/app/pico.scss";
 import "@/app/main.scss";
 import { Navigation } from "@/components/Navigation";
-import Logo from "@/assets/Logo.svg";
+import { Logotype } from "@/components/Logotype";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -67,10 +67,7 @@ export default function RootLayout({
         </svg>
         <header>
           <div className="container">
-            <div className="logotype">
-              <Logo width={50} />
-              <div className="text">Lumphammer</div>
-            </div>
+            <Logotype />
             <Navigation />
           </div>
         </header>

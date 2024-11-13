@@ -1,0 +1,32 @@
+@use "../app/mixins.scss" as *;
+@use "@picocss/pico/scss/colors" as *;
+
+.logotype {
+  font-family: "Alfa Slab One", serif;
+  filter: var(--lumphammer-logo-filter);
+  // color: var(--lumphammer-logo-text-color);
+
+  @include light-theme(&) {
+    filter: drop-shadow(0.05em 0.05em 0.05em #fff)
+      drop-shadow(0.1em 0.1em 0.1em #0004);
+    --lumphammer-logo-svg-color: #{$cyan-700};
+    color: #{$cyan-600};
+  }
+  @include dark-theme(&) {
+    filter: drop-shadow(0 0 0.5em var(--pico-primary));
+    --lumphammer-logo-svg-color: #{$cyan-50};
+    color: white;
+  }
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  align-items: center;
+  svg {
+    fill: var(--lumphammer-logo-svg-color);
+  }
+}
+
+.text {
+  margin: 0;
+  text-transform: uppercase;
+}
