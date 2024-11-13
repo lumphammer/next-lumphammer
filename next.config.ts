@@ -45,6 +45,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [{ hostname: "images.unsplash.com" }],
   },
+  sassOptions: {
+    implementation: "sass-embedded",
+  },
 };
 
 export default nextConfig;
