@@ -5,8 +5,8 @@ export default function Contact() {
 
       <div>
         <p>
-          We&apos;re always interested in hearing about new ideas and projects.
-          Feel free to reach out by email:
+          We&apos;re always interested in hearing about{" "}
+          <mark>new ideas and projects</mark>. Feel free to reach out by email:
         </p>
 
         <div>

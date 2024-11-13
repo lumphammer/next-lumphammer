@@ -78,21 +78,21 @@ h3,
 h4,
 h5,
 h6 {
-  mark {
-    background: linear-gradient(
-      to right in oklch,
-      var(--lumphammer-mark-color-1),
-      var(--lumphammer-mark-color-2)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    padding: 0;
-    filter: url(#dropshadow);
-    padding: 2em 0;
-    pointer-events: none;
-    // margin: -2em;
-  }
+}
+mark {
+  background: linear-gradient(
+    to right in oklch,
+    var(--lumphammer-mark-color-1),
+    var(--lumphammer-mark-color-2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 0;
+  padding: 2em 0;
+  pointer-events: none;
+  // margin: -2em;
+  filter: url(#dropshadow);
 }
 
 a[aria-current] {

@@ -17,10 +17,18 @@
       border: 1px solid #{$sand-200};
     }
     @include dark-theme(&) {
-      background-color: #{$sand-800};
-      box-shadow: -0.1em -0.1em 0.7em #{$cyan-400},
-        0.1em 0.1em 0.7em #{$fuchsia-400};
-      border: 1px solid #fff5;
+      background-color: #{$sand-950};
+      box-shadow:
+        //
+        -0.1em -0.1em 0.7em #{$cyan-400},
+        //
+        0.1em 0.1em 0.7em #{$fuchsia-400},
+        //
+        3em 3em 3em #{$cyan-400}22 inset,
+        -3em -3em 3em #{$fuchsia-400}11 inset;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #{$cyan-200} #{$fuchsia-200} #{$fuchsia-200} #{$cyan-200};
     }
   }
 }

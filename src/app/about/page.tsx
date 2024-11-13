@@ -6,10 +6,10 @@ export default function About() {
   return (
     <>
       <main className="container">
-        <h1>
-          <mark>All About Us</mark>
-        </h1>
-        <h2>Neil</h2>
+        <h1>About Us</h1>
+        <h2>
+          <mark>Neil</mark>
+        </h2>
         <section className={styles.aboutSection}>
           <div>
             <p>
@@ -35,7 +35,9 @@ export default function About() {
         </section>
 
         <hr />
-        <h2>Jade</h2>
+        <h2>
+          <mark>Jade</mark>
+        </h2>
         <section className={styles.aboutSection}>
           <div>
             <p>
