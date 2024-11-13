@@ -29,6 +29,8 @@
   --lumphammer-logo-text-color: #{$cyan-600};
   --lumphammer-h1-filter: drop-shadow(0.05em 0.05em 0.05em white)
     drop-shadow(0.07em 0.07em 0.07em oklch(25% 0.2 200/ 0.2));
+  --lumphammer-mark-color-1: #{$cyan-500};
+  --lumphammer-mark-color-2: #{$fuchsia-500};
 }
 
 // dark color scheme
@@ -49,6 +51,8 @@
   --lumphammer-logo-text-color: white;
   // --pico-box-shadow: 0 0 0.5em var(--pico-primary);
   --lumphammer-h1-filter: drop-shadow(0 0 0.4em oklch(95% 0.4 200/ 0.5));
+  --lumphammer-mark-color-1: #{$cyan-300};
+  --lumphammer-mark-color-2: #{$fuchsia-300};
   button:focus {
     --pico-box-shadow: 0 0 2em #{$cyan-350};
   }
@@ -76,15 +80,18 @@ h5,
 h6 {
   mark {
     background: linear-gradient(
-      to right,
-      oklch(65% 0.2 200),
-      oklch(65% 0.1 20)
+      to right in oklch,
+      var(--lumphammer-mark-color-1),
+      var(--lumphammer-mark-color-2)
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: var(--lumphammer-h1-filter);
     padding: 0;
+    filter: url(#dropshadow);
+    padding: 2em 0;
+    pointer-events: none;
+    // margin: -2em;
   }
 }
 
