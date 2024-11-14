@@ -45,6 +45,12 @@
   }
   --lumphammer-header-background-color: #{$sand-850};
 
+  body > header {
+    // box-shadow: 0 0 2em #{$cyan-250};
+    // border-bottom: 1px solid #{$cyan-150}77;
+    // border-bottom: 1px solid #{$sand-650}77;
+  }
+
   a {
     // border: 100px solid transparent;
     // text-decoration: none;
