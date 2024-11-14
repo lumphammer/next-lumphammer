@@ -1,12 +1,12 @@
 // import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 import TripleChevron from "@/components/TripleChevron";
 // import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className={styles.page}>
+    <main className="container">
       <div className={styles.hook}>
         <h1>
           <mark>Bespoke software development for the TTRPG industry</mark>
