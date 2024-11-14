@@ -4,14 +4,16 @@
 @use "./navigation.scss";
 
 @import "../../public/fonts/AlfaSlabOne-Regular/stylesheet.css";
-@import "../../public/fonts/Geist/stylesheet.css";
+// @import "../../public/fonts/Geist/stylesheet.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
 :root {
   font-family: "Geist", sans-serif;
 }
 
 @include light-theme("&") {
-  --pico-background-color: #{$sand-50};
+  --pico-background-color: #{$sand-100};
   --pico-color: var(--lumphammer-color);
   --pico-primary-inverse: #{$sand-50};
   --pico-primary: #{$cyan-500};
@@ -21,61 +23,92 @@
   //
   --lumphammer-menu-background: #{$sand-50}77;
   --lumphammer-color: #{$sand-950};
+  --lumphammer-header-background-color: #{$sand-50};
 }
 
 @include dark-theme("&") {
   --pico-text-selection-color: #{$cyan-350}44;
-  --pico-primary: #{$cyan-400};
+  --pico-primary: #{$cyan-300};
   --pico-primary-background: #{$cyan-450};
   --pico-primary-underline: #{$cyan-450};
-  --pico-primary-hover: #{$cyan-550};
+  --pico-primary-hover: #{$cyan-100};
   --pico-primary-hover-background: #{$cyan-550};
   --pico-primary-focus: #{$cyan-550};
   --pico-primary-inverse: #fff;
   --pico-background-color: #{$sand-900};
+  --pico-font-weight: 100;
   //
   --lumphammer-menu-background: #{$sand-950}cc;
   --lumphammer-color: #{$sand-50};
   button:focus {
     --pico-box-shadow: 0 0 2em #{$cyan-350};
   }
+  --lumphammer-header-background-color: #{$sand-850};
+
+  a {
+    // border: 100px solid transparent;
+    // text-decoration: none;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      border: 100px solid transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      filter: url(#soft-focus);
+    }
+  }
 }
 
-// h1 {
-//   width: fit-content;
-// }
+body > header {
+  background-color: var(--lumphammer-header-background-color);
+  padding: 0;
+  margin-bottom: 4em;
+  a {
+    // border: 100px solid transparent;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 mark {
   --pico-mark-color: transparent;
   --pico-mark-background-color: transparent;
   @include light-theme(&) {
-    --lumphammer-mark-color-1: #{$cyan-500};
-    --lumphammer-mark-color-2: #{$fuchsia-500};
-    color: #{$cyan-600};
+    color: #{$orange-400};
     padding: 0;
-    // position: relative;
-    text-shadow:
-      //
-      0.03em 0.03em 0 #fff,
-      //
-      0.08em 0.08em 0.1em #0006;
     font-weight: bold;
-    // letter-spacing: 0.05em;
   }
   @include dark-theme(&) {
-    --lumphammer-mark-color-1: #{$cyan-300};
-    --lumphammer-mark-color-2: #{$fuchsia-300};
     filter: url(#soft-focus);
-    padding: 2em 0;
-    pointer-events: none;
+    padding: 0;
     background: linear-gradient(
       to right in oklch,
-      var(--lumphammer-mark-color-1),
-      var(--lumphammer-mark-color-2)
+      #{$cyan-300},
+      #{$fuchsia-300}
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      // border: 4em solid transparent;
+      position: absolute;
+      top: -2em;
+      left: -2em;
+      width: calc(100% + 4em);
+      height: calc(100% + 4em);
+      pointer-events: none;
+    }
   }
 }
 

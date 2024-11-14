@@ -1,19 +1,45 @@
 // import Image from "next/image";
-// import styles from "./page.module.css";
+import Link from "next/link";
+import styles from "./page.module.css";
+import TripleChevron from "@/components/TripleChevron";
 // import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <main className="container">
+    <main className={styles.page}>
+      <div className={styles.hook}>
         <h1>
           <mark>Bespoke software development for the TTRPG industry</mark>
         </h1>
-        <p>
-          Hi! We&apos;re a husband & wife team providing our wibble wibble blob.
+        <p className={styles.intro}>
+          Hi! We&apos;re a husband & wife team doing{" "}
+          <mark>software development</mark> and <mark>VTT conversions</mark> for
+          the TTRPG industry. conversions for the TTRPG industry.
         </p>
-      </main>
-      <footer className="container"></footer>
-    </div>
+        <ul className={styles.links}>
+          <li>
+            <Link href="/about">
+              <TripleChevron />
+              Find out all <mark>about us</mark>
+              <TripleChevron />
+            </Link>
+          </li>
+          <li>
+            <Link href="/projects">
+              <TripleChevron />
+              See our <mark>previous projects</mark>
+              <TripleChevron />
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact">
+              <TripleChevron />
+              Get in <mark>touch</mark>
+              <TripleChevron />
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </main>
   );
 }
