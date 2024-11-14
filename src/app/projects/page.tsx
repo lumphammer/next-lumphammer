@@ -1,4 +1,8 @@
 import styles from "./projects.module.scss";
+import Image from "next/image";
+import investigatorImageFull from "./investigator.webp";
+import investigatorThumbnail from "./investigator_thumbnail.webp";
+import toc2eQuickstartImageFull from "./toc-2e-quickstart.webp";
 
 export default function Portfolio() {
   return (
@@ -10,6 +14,14 @@ export default function Portfolio() {
           <h2>
             <mark>GUMSHOE</mark> for Foundry VTT
           </h2>
+          <p>
+            <a href={investigatorImageFull.src} target="_blank">
+              <Image
+                src={investigatorThumbnail}
+                alt="Screenshot of GUMSHOE for Foundry VTT"
+              />
+            </a>
+          </p>
           <p>
             <a href="https://github.com/lumphammer/gumshoe-fvtt">Website</a>
           </p>
@@ -34,6 +46,15 @@ export default function Portfolio() {
           <h2>
             <mark>Trail of Cthulhu 2nd Edition Quickstart</mark> for Foundry VTT
           </h2>
+          <p>
+            <a href={toc2eQuickstartImageFull.src} target="_blank">
+              <Image
+                src={toc2eQuickstartImageFull}
+                alt="Screenshot of GUMSHOE for Foundry VTT"
+              />
+            </a>
+          </p>
+
           <p>
             To support their{" "}
             <a href="https://www.backerkit.com/c/projects/pelgrane-press/trail-of-cthulhu-2nd-edition">
