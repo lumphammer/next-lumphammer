@@ -42,3 +42,28 @@
     }
   }
 }
+.recursionError {
+  border: 5px solid #{$red-450};
+  background-color: #{$grey-900};
+  --pico-color: #{$red-450};
+  --pico-font-family: monospace;
+  --pico-accordion-close-summary-color: #{$red-450};
+  --pico-accordion-open-summary-color: #{$red-450};
+  --pico-accordion-active-summary-color: #{$red-450};
+  font-family: monospace;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 1em;
+  details {
+    --pico-color: #{$red-450};
+    summary::after {
+      content: "";
+      // the ai gave me this - it's fucking wild.
+      // I'm calling it the 6932% solution.
+      filter: //
+        sepia(95%) //
+        saturate(6932%) //
+        hue-rotate(358deg);
+    }
+  }
+}

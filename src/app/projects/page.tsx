@@ -85,9 +85,27 @@ export default function Portfolio() {
           <h2>
             This very <mark>Website</mark> right here
           </h2>
+          <div className={styles.recursionError}>
+            <p>
+              <strong>Existential Recursion Error</strong>
+            </p>
+            <p>
+              The screenshot of this website cannot be taken until the website
+              is finished, but the website cannot be finished until the
+              screenshot is taken.
+            </p>
+            <details>
+              <summary>More info</summary>
+              <p>
+                To simulate the existence of this screenshot, please look at the
+                website you are currently looking at.
+              </p>
+            </details>
+          </div>
           <p>
-            A static website built with Next.js and PicoCSS. Features a
-            portfolio, and contact form.
+            Neil is a very elder millennial who remembers the good old days of
+            the internet when &ldquo;writing a website&rdquo; meant cranking out
+            HTML by hand, so of course he built this website himself.
           </p>
         </article>
         <article>
