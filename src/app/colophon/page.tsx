@@ -86,8 +86,32 @@ export default function Colophon() {
       <p>
         (I heard all the same arguments when I was writing Perl, then again when
         I was doing PHP, and, yawn, again when I was writing Python. I&apos;ve
-        written a <em>lot</em> of languages, and right now I&apos;m over here
-        enjoying writing TypeScript.)
+        written Java and C# professionally, I was doing Rust at work until
+        recently, and I still use Go. I&apos;ve written a <em>lot</em> of
+        languages, and right now I&apos;m over here enjoying writing
+        TypeScript.)
+      </p>
+      <h2>
+        <a target="_blank" href="https://picocss.com/">
+          PicoCSS
+        </a>
+      </h2>
+      <p>Minimal CSS Framework for Semantic HTML.</p>
+      <p>
+        Fun fact: I never learned Tailwind, even though it&apos;s gigantically
+        popular. The reason is that for many years I&apos;ve been working on
+        hyper-specialised SPAs, and Tailwind seemed like a better fit for - dare
+        I say - sites, rather than apps. Maybe I&apos;m wrong. But anyway,
+        I&apos;ve dodged Tailwind thus far and frankly it looks like a hot mess
+        (it&apos;s one of things where I don&apos;t get it, but a lot of very
+        smart people love it to bits, so I&apos;m going to assume I&apos;m wrong
+        not all of them.)
+      </p>
+      <p>
+        So for this project I was already learning Next.js and I didn&apos;t
+        need another massive learning endaevour, so I went with a minimalist
+        framework that I have used before &mdash; PicoCSS &mdash; and it&apos;s
+        been absolutely great so far.{" "}
       </p>
     </main>
   );
