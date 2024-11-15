@@ -1,6 +1,6 @@
 // import Image from "next/image";
 import Link from "next/link";
-import styles from "./page.module.scss";
+import styles from "./home.module.scss";
 import TripleChevron from "@/components/TripleChevron";
 // import Link from "next/link";
 

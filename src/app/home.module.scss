@@ -1,3 +1,5 @@
+@use "@picocss/pico/scss/colors" as *;
+
 .hook {
   text-align: center;
   max-width: 60ch;
@@ -14,6 +16,8 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  margin: 0;
+  padding: 0;
   li {
     list-style: none;
     font-weight: 200;
