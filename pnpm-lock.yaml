@@ -39,9 +39,6 @@ importers:
       eslint-config-next:
         specifier: 15.0.3
         version: 15.0.3(eslint@8.57.1)(typescript@5.6.3)
-      sass:
-        specifier: ^1.80.6
-        version: 1.80.7
       sass-embedded:
         specifier: ^1.80.7
         version: 1.80.7
@@ -3889,6 +3886,7 @@ snapshots:
   chokidar@4.0.1:
     dependencies:
       readdirp: 4.0.2
+    optional: true
 
   client-only@0.0.1: {}
 
@@ -4879,7 +4877,8 @@ snapshots:
 
   react@19.0.0-rc-fb9a90fa48-20240614: {}
 
-  readdirp@4.0.2: {}
+  readdirp@4.0.2:
+    optional: true
 
   reflect.getprototypeof@1.0.6:
     dependencies:
@@ -5067,6 +5066,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.0
+    optional: true
 
   scheduler@0.25.0-rc-fb9a90fa48-20240614: {}
 
