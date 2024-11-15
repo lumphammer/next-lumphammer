@@ -3,6 +3,8 @@ import Image from "next/image";
 import investigatorImageFull from "./investigator.webp";
 import investigatorThumbnail from "./investigator_thumbnail.webp";
 import toc2eQuickstartImageFull from "./toc-2e-quickstart.webp";
+import pubCrusadeScreenshot from "./pub-crusade-screenshot.webp";
+import Link from "next/link";
 
 export default function Portfolio() {
   return (
@@ -23,7 +25,12 @@ export default function Portfolio() {
             </a>
           </p>
           <p>
-            <a href="https://github.com/lumphammer/gumshoe-fvtt">Website</a>
+            <a
+              target="_blank"
+              href="https://github.com/lumphammer/gumshoe-fvtt"
+            >
+              Website
+            </a>
           </p>
           <p>
             <strong>
@@ -31,9 +38,18 @@ export default function Portfolio() {
             </strong>
           </p>
           <p>
-            This projects was started as personal/fan project in 2021. Pelgrane
-            Press has since blessed it as the official GUMSHOE system for
-            Foundry Virtual Tabletop.
+            This projects was started as personal/fan project in 2021.{" "}
+            <a href="https://pelgranepress.com/" target="_blank">
+              Pelgrane Press
+            </a>{" "}
+            have since blessed it as the official Foundry VTT adaptation of the{" "}
+            <a
+              target="_blank"
+              href="https://pelgranepress.com/product-category/gumshoe/"
+            >
+              GUMSHOE system
+            </a>
+            .
           </p>
           <p>
             It&apos;s almost a meta-system - a toolbox that can be used to
@@ -52,6 +68,15 @@ export default function Portfolio() {
                 src={toc2eQuickstartImageFull}
                 alt="Screenshot of GUMSHOE for Foundry VTT"
               />
+            </a>
+          </p>
+
+          <p>
+            <a
+              target="_blank"
+              href="https://foundryvtt.com/packages/toc-2e-quickstart"
+            >
+              Website
             </a>
           </p>
 
@@ -90,9 +115,10 @@ export default function Portfolio() {
               <strong>Existential Recursion Error</strong>
             </p>
             <p>
-              The screenshot of this website cannot be taken until the website
-              is finished, but the website cannot be finished until the
-              screenshot is taken.
+              This is supposed to be a screenshot of the website you are looking
+              at right now, but the screenshot can&apos;t be taken until the
+              website is finished, and the website can&apos;t be finished until
+              the screenshot is taken. Help.
             </p>
             <details>
               <summary>More info</summary>
@@ -107,15 +133,43 @@ export default function Portfolio() {
             the internet when &ldquo;writing a website&rdquo; meant cranking out
             HTML by hand, so of course he built this website himself.
           </p>
+          <p>
+            <small>
+              (There&apos;s a <Link href="/colophon">Colophon</Link> too, if you
+              want to know the what this site is made of in unnecessary and
+              frankly gory detail.)
+            </small>
+          </p>
         </article>
         <article>
           <h2>
             <mark>Pub Crusade</mark> for Foundry VTT
           </h2>
           <p>
-            A system implementation of the Pub Crusade roleplaying game system
-            for the Foundry Virtual Tabletop platform. Features character
-            sheets, skill tests, and resource tracking.
+            <a href={pubCrusadeScreenshot.src} target="_blank">
+              <Image
+                src={pubCrusadeScreenshot}
+                alt="Screenshot of Pub Crusade for Foundry VTT"
+              />
+            </a>
+          </p>
+          <p>
+            <a
+              target="_blank"
+              href="https://github.com/lumphammer/pub-crusade-fvtt/"
+            >
+              Website
+            </a>
+          </p>
+          <p>
+            A system implementation of one-page game{" "}
+            <a
+              target="_blank"
+              href="https://rowanrookanddecard.com/product/pub-crusade/?v=7885444af42e"
+            >
+              Pub Crusade
+            </a>{" "}
+            by Grant Howitt, for the Foundry Virtual Tabletop platform.
           </p>
         </article>
       </div>
