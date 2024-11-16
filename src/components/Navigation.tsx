@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import { OnNavigateContext } from "./OnNavigateContext";
 import { NavigationLink } from "./NavigationLink";
+import { TopLinks } from "./TopLinks";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,10 @@ export function Navigation() {
   return (
     <nav>
       {/* Desktop Navigation */}
-      <div className="desktop-nav">{links}</div>
+      <div className="desktop-nav">
+        {links}
+        <TopLinks />
+      </div>
 
       {/* Mobile Hamburger Button */}
       <button
@@ -57,7 +61,10 @@ export function Navigation() {
           aria-modal="true"
         >
           <OnNavigateContext.Provider value={closeMenu}>
-            <div className="mobile-menu-content">{links}</div>
+            <div className="mobile-menu-content">
+              {links}
+              <TopLinks />
+            </div>
           </OnNavigateContext.Provider>
         </div>
       )}

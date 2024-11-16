@@ -93,7 +93,6 @@ export default function RootLayout({
             <Logotype />
             <div className={styles.links}>
               <Navigation />
-              <TopLinks />
             </div>
           </div>
         </header>
