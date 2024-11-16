@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa6";
 import styles from "./topLinks.module.scss";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function TopLinks() {
   return (
@@ -7,10 +8,11 @@ export function TopLinks() {
       <a
         href="https://github.com/lumphammer"
         target="_blank"
-        style={{ marginLeft: "1em" }}
+        style={{ display: "inline" }}
       >
         <FaGithub />
       </a>
+      <ThemeSwitcher />
     </div>
   );
 }

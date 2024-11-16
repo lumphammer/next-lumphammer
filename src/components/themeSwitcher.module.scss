@@ -1,0 +1,26 @@
+@use "../app/mixins.scss" as *;
+
+.themeSwitcher {
+  display: inline;
+}
+
+.sun {
+  display: none;
+  :root[data-theme="light"] & {
+    display: inline;
+  }
+}
+
+.moon {
+  display: none;
+  :root[data-theme="dark"] & {
+    display: inline;
+  }
+}
+
+.system {
+  display: none;
+  :root:not([data-theme]) & {
+    display: inline;
+  }
+}
