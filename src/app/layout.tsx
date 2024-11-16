@@ -13,14 +13,29 @@ export const metadata: Metadata = {
   description: "Bespoke software development for the TTRPG industry",
 };
 
+function setThemeBeforePageDraws() {
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme) {
+    console.log("setting theme", storedTheme);
+    document.documentElement.setAttribute("data-theme", storedTheme);
+  }
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    // suppressHydrationWarning is used to prevent a warning about the theme differing between server and client
+    // https://legacy.reactjs.org/docs/dom-elements.html#suppresshydrationwarning:~:text=It%20only%20works%20one%20level%20deep
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(${setThemeBeforePageDraws.toString()})();`,
+          }}
+        />
         <SvgFilters />
         <header>
           <div className="container">
