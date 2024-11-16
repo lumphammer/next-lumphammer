@@ -5,6 +5,8 @@ import "@/app/pico.scss";
 import "@/app/main.scss";
 import { Navigation } from "@/components/Navigation";
 import { Logotype } from "@/components/Logotype";
+import styles from "./layout.module.scss";
+import { TopLinks } from "@/components/TopLinks";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -89,7 +91,10 @@ export default function RootLayout({
         <header>
           <div className="container">
             <Logotype />
-            <Navigation />
+            <div className={styles.links}>
+              <Navigation />
+              <TopLinks />
+            </div>
           </div>
         </header>
         {children}
