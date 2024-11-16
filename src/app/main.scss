@@ -17,14 +17,15 @@
   --pico-background-color: #{$sand-100};
   --pico-color: var(--lumphammer-color);
   --pico-primary-inverse: #{$sand-50};
-  --pico-primary: #{$cyan-500};
+  --pico-primary: #{$cyan-600};
   --pico-primary-background: #{$cyan-550};
   --pico-primary-focus: #{$cyan-450};
   --pico-primary-hover-background: #{$cyan-450};
+  --pico-secondary: #{$red-600};
   //
   --lumphammer-menu-background: #{$sand-50}77;
-  --lumphammer-color: #{$sand-950};
-  --lumphammer-header-background-color: #{$sand-50};
+  --lumphammer-color: #{$sand-900};
+  --lumphammer-header-background-color: #{$sand-150};
 }
 
 @include dark-theme("&") {
@@ -92,7 +93,7 @@ mark {
   --pico-mark-color: transparent;
   --pico-mark-background-color: transparent;
   @include light-theme(&) {
-    color: #{$orange-400};
+    color: var(--pico-secondary);
     padding: 0;
     font-weight: bold;
   }
