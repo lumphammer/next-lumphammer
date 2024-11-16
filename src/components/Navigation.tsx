@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { OnNavigateContext } from "./OnNavigateContext";
+import { NavigationLink } from "./NavigationLink";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,38 +24,12 @@ export function Navigation() {
     }
   }, [isOpen, closeMenu]);
 
-  const router = useRouter();
-
-  // we're reacting on mousedown because theo said so, which means we need some
-  // extra magic to navigate (if we wait for the click to fire it never does
-  // because the menu gets closed before the click event fires.)
-  const handleLinkClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      closeMenu();
-      //navigate to the link
-      router.push(e.currentTarget.href);
-    },
-    [closeMenu, router]
-  );
-
   const links = (
     <>
-      <Link href="/" onMouseDown={handleLinkClick}>
-        Home
-      </Link>
-      <Link href="/about" onMouseDown={handleLinkClick}>
-        About
-      </Link>
-      {/* <Link href="/todo" onMouseDown={handleLinkClick}>
-        Todo
-      </Link> */}
-      <Link href="/projects" onMouseDown={handleLinkClick}>
-        Projects
-      </Link>
-      <Link href="/contact" onMouseDown={handleLinkClick}>
-        Contact
-      </Link>
+      <NavigationLink to="/">Home</NavigationLink>
+      <NavigationLink to="/about">About</NavigationLink>
+      <NavigationLink to="/projects">Projects</NavigationLink>
+      <NavigationLink to="/contact">Contact</NavigationLink>
     </>
   );
 
@@ -82,7 +56,9 @@ export function Navigation() {
           role="dialog"
           aria-modal="true"
         >
-          <div className="mobile-menu-content">{links}</div>
+          <OnNavigateContext.Provider value={closeMenu}>
+            <div className="mobile-menu-content">{links}</div>
+          </OnNavigateContext.Provider>
         </div>
       )}
     </nav>
