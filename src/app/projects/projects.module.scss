@@ -10,6 +10,8 @@
     border: 1px solid var(--pico-border);
     margin: 0;
     border-radius: 0.2em;
+    // see https://stackoverflow.com/questions/9807620/ipad-safari-scrolling-causes-html-elements-to-disappear-and-reappear-with-a-dela
+    transform: translate3d(0, 0, 0);
 
     @include light-theme(&) {
       background-color: #{$zinc-50};

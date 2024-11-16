@@ -4,6 +4,8 @@
   flex-wrap: wrap;
   gap: 1em;
   align-items: flex-start;
+  // see https://stackoverflow.com/questions/9807620/ipad-safari-scrolling-causes-html-elements-to-disappear-and-reappear-with-a-dela
+  transform: translate3d(0, 0, 0);
   img {
     flex: 1;
     border: 0.5em solid var(--pico-color);
