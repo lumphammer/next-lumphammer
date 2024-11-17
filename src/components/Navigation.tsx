@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { OnNavigateContext } from "./OnNavigateContext";
 import { NavigationLink } from "./NavigationLink";
-import { TopLinks } from "./TopLinks";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ export function Navigation() {
       {/* Desktop Navigation */}
       <div className="desktop-nav">
         {links}
-        <TopLinks />
+        <ThemeSwitcher />
       </div>
 
       {/* Mobile Hamburger Button */}
@@ -64,10 +64,8 @@ export function Navigation() {
         >
           <OnNavigateContext.Provider value={closeMenu}>
             <div className="mobile-menu-content">
-              {/* <input type="search" placeholder="Search" /> */}
-              Navigate
               {links}
-              <TopLinks />
+              <ThemeSwitcher />
             </div>
           </OnNavigateContext.Provider>
         </div>

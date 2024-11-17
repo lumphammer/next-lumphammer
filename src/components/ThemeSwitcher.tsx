@@ -5,7 +5,7 @@ import styles from "./themeSwitcher.module.scss";
 import { useCallback, useEffect } from "react";
 
 export function ThemeSwitcher() {
-  const handleClick = useCallback(() => {
+  const handleMouseDown = useCallback(() => {
     const storedTheme = document.documentElement.getAttribute("data-theme");
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
@@ -50,9 +50,10 @@ export function ThemeSwitcher() {
 
   return (
     <a
+      href="#"
       className={styles.themeSwitcher}
-      onClick={handleClick}
-      // role="button"
+      onMouseDown={handleMouseDown}
+      onClick={(e) => e.preventDefault()}
       tabIndex={0}
     >
       <FaSun className={styles.sun} aria-label="Toggle light theme" />
