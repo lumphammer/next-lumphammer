@@ -1,3 +1,6 @@
+@use "../mixins.scss" as *;
+@use "@picocss/pico/scss/colors" as *;
+
 .aboutSection {
   display: flex;
   flex-direction: row;
@@ -8,8 +11,26 @@
   transform: translate3d(0, 0, 0);
   img {
     flex: 1;
-    border: 0.5em solid var(--pico-color);
     min-width: 10rem;
+    @include light-theme(&) {
+      border-style: solid;
+      border-width: 0.5em 0.5em 1em 0.5em;
+      border-color: #{$grey-50};
+      box-shadow: 0 0.5em 1em 0 #{$grey-600};
+      transform: rotate(2deg);
+    }
+    @include dark-theme(&) {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #{$cyan-200} #{$fuchsia-200} #{$fuchsia-200} #{$cyan-200};
+      box-shadow:
+        //
+        -0.2em -0.2em 0.7em #{$cyan-400},
+        //
+        0.2em 0.2em 0.7em #{$fuchsia-400},
+        //
+;
+    }
   }
   & > div {
     flex: 2;
