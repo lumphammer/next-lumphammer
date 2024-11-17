@@ -20,14 +20,14 @@ export default function Home() {
           <li>
             <Link href="/about">
               <TripleChevron />
-              Find out all <mark>about us</mark>
+              Find out <mark>about us</mark>
               <TripleChevron />
             </Link>
           </li>
           <li>
             <Link href="/projects">
               <TripleChevron />
-              See our <mark>previous projects</mark>
+              See our <mark>projects</mark>
               <TripleChevron />
             </Link>
           </li>
