@@ -7,112 +7,88 @@ export default function Colophon() {
         technology stacks.
       </p>
 
-      <h2>
-        <a target="_blank" href="https://nextjs.org/">
-          Next.js
-        </a>
-      </h2>
-      <p>A meta-framework for building full-stack React applications.</p>
-      <h3>
-        Why use a full-stack framework for a simple static site (as opposed to a
-        dedicated static site builder like Gatsby?) Isn&apos;t that overkill?
-      </h3>
-      <p>
-        Well, mainly it gives me extensibility in both directions. If I want to
-        add client-side functionality, it&apos;s as simple as writing a
-        component and adding <code>&quot;use client&quot;;</code> at the top. If
-        I want to add server-side functionality, it&apos;s as simple as writing
-        a handler function and adding <code>&quot;use server&quot;;</code> at
-        the top.
-      </p>
-      <p>
-        By contrast a static builder has no direct route to add server-side or
-        client-side functionality. To add server-side functionality, you&apos;ll
-        need an entire separate project to run your back-end. If you introduce
-        client-side functionality, you&apos;re adding some kind of client side
-        framework anyway. So why not start with a tool that&apos;s got you
-        covered for everything?
-      </p>
-      <h3>
-        But why a <em>React</em>-based framework? What about SvelteKit, Nuxt,
-        SolidStart, etc?
-      </h3>
-      <p>
-        React gets some flak because it&apos;s such a massive incumbent.
-        It&apos;s the &quot;default&quot; reactive renderer for web development.
-        It&apos;s also one of the oldest ones (I&apos;ve been working with it
-        since 2015), so some folks really want to promote other alternatives.
-        But the reality on the ground is that React has a massive ecosystem, and
-        is constantly evolving. React in 2024 is as much a new framework as
-        Svelte and Solid are. That&apos;s not just true of React, by the way -
-        Vue and Angular, which are also senior citizens in the web framework
-        space, are also constantly evolving and improving. I just mean that
-        React is not the same framework it was in 2015.
-      </p>
-      <p>
-        I think there&apos;s a problem where a lot of &mdash; shall we say
-        &mdash; junior and mid-level devs spend their day job working on some
-        massive corporate React project, which they hate because it&apos;s
-        somebody else&apos;s code and huge corporate projects always suck to
-        work on. And they blame React and the React ecosystem. Then they go home
-        and work on a hobby project in something cool like Svelte or Solid,
-        which they find fun because it&apos;s their code.
-      </p>
-      <h3>
-        Okay okay, but why Next.js? There are other full-stack React frameworks,
-        like Remix and TanStack Start.
-      </h3>
-      <p>
-        Yes, and they&apos;re all perfectly valid choices. But the argument for
-        Next.js is that it&apos;s the most popular, and has the largest
-        ecosystem. Also &mdash; and this is more of a reason why <em>I</em>{" "}
-        chose it as opposed to a reason why it&apos;s good overall &mdash; For
-        the last few years I&apos;ve been working on SPAs, and I&apos;ve not
-        needed to just write a good old <em>website</em> for ages. So I&apos;d
-        never used Next, and it&apos;s such a huge part of the modern web
-        landscape that I thought it was time I found out what all the
-        hullaballoo was about. Every other full-stack framework is to some
-        extent working in the shadow of Next.js.
-      </p>
-      <h3>
-        Server-side JavaScript is dumb, JavaScript is a dumb language,
-        you&apos;re dumb for using it. And TypeScript sucks too.
-      </h3>
-      <p>
-        Congratulations for being so smart. I&apos;m sure your personal
-        favourite language is lovely and much better. I wish you many years of
-        happiness together.
-      </p>
-      <p>
-        (I heard all the same arguments when I was writing Perl, then again when
-        I was doing PHP, and, yawn, again when I was writing Python. I&apos;ve
-        written Java and C# professionally, I was doing Rust at work until
-        recently, and I still use Go. I&apos;ve written a <em>lot</em> of
-        languages, and right now I&apos;m over here enjoying writing
-        TypeScript.)
-      </p>
-      <h2>
-        <a target="_blank" href="https://picocss.com/">
-          PicoCSS
-        </a>
-      </h2>
-      <p>Minimal CSS Framework for Semantic HTML.</p>
-      <p>
-        Fun fact: I never learned Tailwind, even though it&apos;s gigantically
-        popular. The reason is that for many years I&apos;ve been working on
-        hyper-specialised SPAs, and Tailwind seemed like a better fit for - dare
-        I say - sites, rather than apps. Maybe I&apos;m wrong. But anyway,
-        I&apos;ve dodged Tailwind thus far and frankly it looks like a hot mess
-        (it&apos;s one of things where I don&apos;t get it, but a lot of very
-        smart people love it to bits, so I&apos;m going to assume I&apos;m wrong
-        not all of them.)
-      </p>
-      <p>
-        So for this project I was already learning Next.js and I didn&apos;t
-        need another massive learning endaevour, so I went with a minimalist
-        framework that I have used before &mdash; PicoCSS &mdash; and it&apos;s
-        been absolutely great so far.{" "}
-      </p>
+      <p>This site was made using:</p>
+
+      <dl>
+        <dt>
+          <a target="_blank" href="https://nextjs.org/">
+            Next.js
+          </a>
+        </dt>
+        <dd>
+          A meta-framework for building full-stack React applications. Gives me
+          flexibility to add server or client-side functionality at any time if
+          I want to.
+        </dd>
+        <dt>
+          <a target="_blank" href="https://reactjs.org/">
+            React
+          </a>
+        </dt>
+        <dd>
+          A JavaScript library for building user interfaces. I&apos;ve been
+          using it since 2015. Many great alternatives exist, but React is
+          constantly evolving.
+        </dd>
+        <dt>
+          <a target="_blank" href="https://picocss.com/">
+            PicoCSS
+          </a>
+        </dt>
+        <dd>
+          A minimal CSS framework for semantic HTML. I <em>nearly</em> went with
+          Tailwind, but PicoCSS is great.
+        </dd>
+        <dt>
+          <a target="_blank" href="https://sass-lang.com/">
+            Sass
+          </a>
+        </dt>
+        <dd>A CSS preprocessor.</dd>
+        <dt>
+          <a target="_blank" href="https://www.typescriptlang.org/">
+            TypeScript
+          </a>
+        </dt>
+        <dd>
+          A typed superset of JavaScript that compiles to plain JavaScript.
+        </dd>
+        <dt>
+          <a target="_blank" href="https://eslint.org/">
+            ESLint
+          </a>
+        </dt>
+        <dd>A pluggable linting utility for JavaScript and TypeScript.</dd>
+        <dt>
+          <a target="_blank" href="https://vercel.com/font">
+            Geist Sans
+          </a>
+        </dt>
+        <dd>
+          A screen font designed by Vercel (creators of Next.js). Attractive and
+          legible (I hope you agree.) At risk of becoming the &quot;oh hey,
+          you&apos;re using Next&quot; font. But I like it.
+        </dd>
+        <dt>
+          <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter"
+          >
+            SVG Filters
+          </a>
+        </dt>
+        <dd>I&apos;m using SVG filters to create some visual effects.</dd>
+        <dt>
+          <a target="_blank" href="https://www.cursor.com/">
+            Cursor
+          </a>
+        </dt>
+        <dd>
+          Look, I have <strong>strong</strong> opinions about the risks of AI,
+          but the utility of it as &quot;very smart autocomplete&quot; is
+          undeniable. Cursor is the best AI code helper I&apos;ve used.
+        </dd>
+      </dl>
     </main>
   );
 }
