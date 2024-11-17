@@ -52,14 +52,12 @@ nav {
   /* Mobile Popover Menu */
   .mobile-menu {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     backdrop-filter: blur(50px);
-    background: var(--lumphammer-menu-background); //
-    z-index: 5; //
+    background: var(--lumphammer-menu-background);
+    z-index: 5;
     animation: slideIn 0.3s ease-out;
+    overflow-y: auto;
     &.fade-out {
       animation: fadeOut 300ms ease-out;
       animation-fill-mode: forwards;

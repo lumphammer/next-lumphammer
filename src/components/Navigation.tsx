@@ -13,6 +13,7 @@ export function Navigation() {
     setFadingOut(true);
     setTimeout(() => {
       setIsOpen(false);
+      document.body.parentElement!.style.overflow = "auto";
     }, 300);
   }, []);
 
@@ -22,6 +23,7 @@ export function Navigation() {
     } else {
       setFadingOut(false);
       setIsOpen(true);
+      document.body.parentElement!.style.overflow = "hidden";
     }
   }, [isOpen, closeMenu]);
 
@@ -62,6 +64,8 @@ export function Navigation() {
         >
           <OnNavigateContext.Provider value={closeMenu}>
             <div className="mobile-menu-content">
+              {/* <input type="search" placeholder="Search" /> */}
+              Navigate
               {links}
               <TopLinks />
             </div>
