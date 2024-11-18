@@ -7,9 +7,59 @@ export default function Colophon() {
         technology stacks.
       </p>
 
-      <p>This site was made using:</p>
+      <p>This site was made using, in alphabetical order:</p>
 
       <dl>
+        <dt>
+          <a
+            target="_blank"
+            href="https://www.adobe.com/products/illustrator.html"
+          >
+            Adobe Illustrator
+          </a>{" "}
+          and{" "}
+          <a
+            target="_blank"
+            href="https://www.adobe.com/products/photoshop.html"
+          >
+            Adobe Photoshop
+          </a>
+        </dt>
+        <dd>
+          Yep, I&apos;m a Creative Cloud victim. I have also used{" "}
+          <a href="https://inkscape.org/" target="_blank">
+            Inkscape
+          </a>{" "}
+          and{" "}
+          <a href="https://www.gimp.org/" target="_blank">
+            GIMP
+          </a>
+          , but I need Adobe CC for interop with clients, so I maintain the
+          subscription. I also have a license for{" "}
+          <a target="_blank" href="https://affinity.serif.com/designer/">
+            Affinity Designer
+          </a>{" "}
+          and{" "}
+          <a target="_blank" href="https://affinity.serif.com/photo/">
+            Affinity Photo
+          </a>
+          .
+        </dd>
+        <dt>
+          <a
+            target="_blank"
+            href="https://fonts.google.com/specimen/Alfa+Slab+One"
+          >
+            Alfa Slab One
+          </a>
+        </dt>
+        <dd>
+          A lovely chunky font by{" "}
+          <a target="_blank" href="https://jmsole.cl/">
+            José Solé
+          </a>
+          .
+        </dd>
         <dt>
           <a target="_blank" href="https://www.cursor.com/">
             Cursor
@@ -17,7 +67,7 @@ export default function Colophon() {
         </dt>
         <dd>
           Look, I have <strong>strong</strong> opinions about the risks of
-          so-called &quot;AI&quot;, but the utility of it as &quot;very smart
+          so-called AI, but the utility of it as &quot;very smart
           autocomplete&quot; is undeniable. Cursor is the best AI code helper
           I&apos;ve used.
         </dd>
@@ -107,8 +157,8 @@ export default function Colophon() {
         </dt>
         <dd>
           I use Ubuntu 22.04 as my dev environment, but I use it through Windows
-          11 via WSL2. I&apos;ve used Linux since 1998, but I Windows has stuff
-          like Steam and Photoshop <em>natively.</em> It&apos;s a good stack.
+          11 via WSL2. I&apos;ve used Linux since 1998, but Windows has stuff
+          like Steam and Photoshop that I also want. It&apos;s a good stack.
         </dd>
       </dl>
     </main>
