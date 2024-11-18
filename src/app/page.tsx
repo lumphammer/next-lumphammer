@@ -13,7 +13,8 @@ export default function Home() {
         <Logo className={styles.logo} />
 
         <h1>
-          <mark>Bespoke software development for the TTRPG industry</mark>
+          <mark>Bespoke software development</mark> for the{" "}
+          <mark>TTRPG industry</mark>
         </h1>
         <p className={styles.intro}>
           Hi! <mark>Lumphammer</mark> is a husband & wife team offering{" "}
