@@ -23,16 +23,16 @@ export default function Home() {
         </p>
         <ul className={styles.links}>
           <li>
-            <Link href="/about">
+            <Link href="/projects">
               <TripleChevron />
-              Find out <mark>about us</mark>
+              See our <mark>projects</mark>
               <TripleChevron />
             </Link>
           </li>
           <li>
-            <Link href="/projects">
+            <Link href="/about">
               <TripleChevron />
-              See our <mark>projects</mark>
+              Find out <mark>about us</mark>
               <TripleChevron />
             </Link>
           </li>

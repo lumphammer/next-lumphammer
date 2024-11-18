@@ -30,8 +30,8 @@ export function Navigation() {
   const links = (
     <>
       <NavigationLink to="/">Home</NavigationLink>
-      <NavigationLink to="/about">About</NavigationLink>
       <NavigationLink to="/projects">Projects</NavigationLink>
+      <NavigationLink to="/about">About</NavigationLink>
       <NavigationLink to="/contact">Contact</NavigationLink>
     </>
   );
