@@ -80,8 +80,8 @@ export default function SvgFilters() {
           </feComponentTransfer>
         </filter>
 
-        {/* EXTRUDEL 1 */}
-        <filter id="extrudel">
+        {/* EXTRUDE 5 */}
+        <filter id="extrude-5">
           <feConvolveMatrix
             in="SourceAlpha"
             result="extrude"
@@ -98,7 +98,7 @@ export default function SvgFilters() {
             {" "}
           </feConvolveMatrix>
           <feOffset in="extrude" dx="3" dy="3" result="extrude-offset" />
-          <feFlood floodColor="#400" result="flood"></feFlood>
+          <feFlood floodColor="#04373777" result="flood"></feFlood>
           <feComposite
             in="flood"
             operator="in"
@@ -111,151 +111,6 @@ export default function SvgFilters() {
             in2="flood-in-extrude"
             result="final"
           />
-        </filter>
-
-        {/* EXTRUDEL 2 */}
-        <filter id="extrudel2">
-          <feConvolveMatrix
-            in="SourceAlpha"
-            result="extrude"
-            order="3,3"
-            divisor="1"
-            kernelMatrix={`
-              1,0,0,
-              0,1,0,
-              0,0,1
-              `}
-          >
-            {" "}
-          </feConvolveMatrix>
-          <feOffset in="extrude" dx="2" dy="2" result="extrude-offset" />
-          <feFlood floodColor="#400" result="flood"></feFlood>
-          <feComposite
-            in="flood"
-            operator="in"
-            in2="extrude-offset"
-            result="flood-in-extrude"
-          />
-          <feComposite
-            in="SourceGraphic"
-            operator="over"
-            in2="flood-in-extrude"
-            result="final"
-          />
-        </filter>
-
-        {/* EDITING VINTAGE */}
-        <filter
-          id="editing-vintage"
-          x="-100%"
-          y="-100%"
-          width="300%"
-          height="300%"
-        >
-          <feConvolveMatrix
-            in="SourceGraphic"
-            result="extrude"
-            order="9,9"
-            divisor="1"
-            kernelMatrix="1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1"
-          >
-            {" "}
-          </feConvolveMatrix>
-          <feFlood floodColor="#900" result="flood-extrude"></feFlood>
-          <feComposite
-            operator="in"
-            in="flood-extrude"
-            in2="extrude"
-            result="extrude-color"
-          ></feComposite>
-          <feOffset
-            dx="5"
-            dy="5"
-            in="extrude-color"
-            result="extrude-offset"
-          ></feOffset>
-          <feColorMatrix
-            in="SourceGraphic"
-            result="stroke"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 "
-          ></feColorMatrix>
-          <feColorMatrix
-            in="SourceGraphic"
-            result="fill"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 "
-          ></feColorMatrix>
-          <feConvolveMatrix
-            in="stroke"
-            result="inner-shadow"
-            order="5,5"
-            divisor="1"
-            kernelMatrix="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 "
-          ></feConvolveMatrix>
-          <feOffset dx="1" dy="1" in="inner-shadow" result="offset"></feOffset>
-          <feComposite
-            operator="in"
-            in="offset"
-            in2="SourceAlpha"
-            result="comp"
-          ></feComposite>
-          <feFlood floodColor="#000" result="flood3"></feFlood>
-          <feComposite
-            operator="in"
-            in="flood3"
-            in2="comp"
-            result="comp2"
-          ></feComposite>
-          <feColorMatrix
-            in="comp2"
-            result="comp3"
-            type="matrix"
-            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.5 0 "
-          ></feColorMatrix>
-          <feFlood floodColor="#f00" result="flood1"></feFlood>
-          <feComposite
-            operator="in"
-            in="flood1"
-            in2="fill"
-            result="fill2"
-          ></feComposite>
-          <feFlood floodColor="#fff" result="flood2"></feFlood>
-          <feComposite
-            operator="in"
-            in="flood2"
-            in2="stroke"
-            result="stroke2"
-          ></feComposite>
-          <feMerge result="obj">
-            <feMergeNode in="extrude-offset"></feMergeNode>
-            <feMergeNode in="fill2"></feMergeNode>
-            <feMergeNode in="comp3"></feMergeNode>
-          </feMerge>
-          <feConvolveMatrix
-            in="SourceAlpha"
-            result="shadow"
-            order="9,9"
-            divisor="1"
-            kernelMatrix="1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1"
-          ></feConvolveMatrix>
-          <feOffset
-            dx="15"
-            dy="15"
-            in="shadow"
-            result="shadow-offset"
-          ></feOffset>
-          <feFlood floodColor="#444" result="flood-shadow"></feFlood>
-          <feComposite
-            operator="in"
-            in="flood-shadow"
-            in2="shadow-offset"
-            result="shadow-color"
-          ></feComposite>
-          <feMerge>
-            <feMergeNode in="shadow-color"></feMergeNode>
-            <feMergeNode in="obj"></feMergeNode>
-          </feMerge>
         </filter>
 
         <filter id="inner-shadow">

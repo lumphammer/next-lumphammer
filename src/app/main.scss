@@ -95,7 +95,7 @@ h6 {
       filter: //
         url(#inner-shadow) //
         url(#solid-stroke-2) //
-        url(#extrudel) //
+        url(#extrude-5) //
 ;
     }
   }
@@ -122,6 +122,16 @@ mark {
     color: #{$red-500};
     padding: 0;
 
+    //
+    background: linear-gradient(
+      to right in oklch,
+      #{$fuchsia-600},
+      #{$cyan-600}
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
     filter: //
       // url(#inner-shadow) //
       url(#solid-stroke-1) //
@@ -138,8 +148,8 @@ mark {
     padding: 0;
     background: linear-gradient(
       to right in oklch,
-      #{$cyan-300},
-      #{$fuchsia-300}
+      #{$fuchsia-300},
+      #{$cyan-300}
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
