@@ -48,12 +48,6 @@
   }
   --lumphammer-header-background-color: #{$sand-850};
 
-  // body > header {
-  //   // box-shadow: 0 0 2em #{$cyan-250};
-  //   // border-bottom: 1px solid #{$cyan-150}77;
-  //   // border-bottom: 1px solid #{$sand-650}77;
-  // }
-
   a {
     // border: 100px solid transparent;
     // text-decoration: none;
@@ -74,6 +68,20 @@
         filter: url(#soft-focus);
       }
     }
+  }
+}
+
+body > header {
+  @include light-theme(&) {
+    // box-shadow: 0 0 1em #{$cyan-850}77;
+    // background: linear-gradient(to top, #{$sand-250}, #{$sand-150} 50%);
+    border-bottom: 1px solid #{$sand-450}77;
+  }
+  @include dark-theme(&) {
+    box-shadow: 0 0 0.8em #{$cyan-250}77;
+    // background: linear-gradient(to top, #{$cyan-350}77, #{$sand-850});
+    border-bottom: 1px solid #{$cyan-250}77;
+    // border-bottom: 1px solid #{$sand-650}77;
   }
 }
 
