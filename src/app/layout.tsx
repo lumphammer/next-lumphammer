@@ -7,6 +7,7 @@ import { Navigation } from "@/components/Navigation";
 import { Logotype } from "@/components/Logotype";
 import styles from "./layout.module.scss";
 import SvgFilters from "@/components/SvgFilters";
+import { CSPostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "Lumphammer",
@@ -34,24 +35,26 @@ export default function RootLayout({
     // suppressHydrationWarning is used to prevent a warning about the theme differing between server and client
     // https://legacy.reactjs.org/docs/dom-elements.html#suppresshydrationwarning:~:text=It%20only%20works%20one%20level%20deep
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(${setThemeBeforePageDraws.toString()})();`,
-          }}
-        />
-        <SvgFilters />
-        <header>
-          <div className="container">
-            <Logotype />
-            <div className={styles.links}>
-              <Navigation />
+      <CSPostHogProvider>
+        <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(${setThemeBeforePageDraws.toString()})();`,
+            }}
+          />
+          <SvgFilters />
+          <header>
+            <div className="container">
+              <Logotype />
+              <div className={styles.links}>
+                <Navigation />
+              </div>
             </div>
-          </div>
-        </header>
-        {children}
-        <footer className="container"></footer>
-      </body>
+          </header>
+          {children}
+          <footer className="container"></footer>
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
