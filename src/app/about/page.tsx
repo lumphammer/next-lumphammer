@@ -1,5 +1,6 @@
 import Image from "next/image";
 import neil_and_romi from "./neil_and_romi.jpg";
+import jadeSunset from "./Jade_Sunset.webp";
 import styles from "./about.module.scss";
 
 export default function About() {
@@ -31,7 +32,10 @@ export default function About() {
             <p>Neil lives alone with his wife Jade, and two cats.</p>
           </div>
 
-          <Image src={neil_and_romi} alt="Neil and Romi" />
+          <Image
+            src={neil_and_romi}
+            alt="A photo of a man (Neil) wearing glasses and a t-shirt, with a cat on his lap."
+          />
         </section>
 
         <hr />
@@ -48,10 +52,8 @@ export default function About() {
             <p>Jade lives alone with her husband Neil, and two cats.</p>
           </div>
           <Image
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
-            width={2000}
-            height={1333}
-            alt="Desk with computer monitors showing code"
+            src={jadeSunset}
+            alt="A photo of Jade with a sunset in the background."
             className="about-image"
           />
         </section>
