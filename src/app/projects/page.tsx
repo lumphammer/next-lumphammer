@@ -34,12 +34,36 @@ export default function Portfolio() {
           </p>
           <p>
             <strong>
-              The Official GUMSHOE system for Foundry Virtual Tabletop.
+              The Official GUMSHOE system for Foundry Virtual Tabletop. GUMSHOE
+              is a system for tabletop roleplaying games which focuses on
+              investigation and adventure. It powers many award-winning games,
+              like{" "}
+              <a
+                target="_blank"
+                href="https://pelgranepress.com/product-category/gumshoe/trail-of-cthulhu/"
+              >
+                Trail of Cthulhu
+              </a>
+              ,{" "}
+              <a
+                target="_blank"
+                href="https://pelgranepress.com/product/nights-black-agents/"
+              >
+                Night&apos;s Black Agents
+              </a>
+              , and{" "}
+              <a
+                target="_blank"
+                href="https://pelgranepress.com/product/mutant-city-blues-2nd-edition/"
+              >
+                Mutant City Blues
+              </a>
+              .
             </strong>
           </p>
           <p>
             This projects was started as personal/fan project in 2021.{" "}
-            <a href="https://pelgranepress.com/" target="_blank">
+            <a target="_blank" href="https://pelgranepress.com/">
               Pelgrane Press
             </a>{" "}
             have since blessed it as the official Foundry VTT adaptation of the{" "}
@@ -162,7 +186,7 @@ export default function Portfolio() {
             </a>
           </p>
           <p>
-            A system implementation of one-page game{" "}
+            A system implementation of the one-page game{" "}
             <a
               target="_blank"
               href="https://rowanrookanddecard.com/product/pub-crusade/?v=7885444af42e"
