@@ -1,5 +1,5 @@
 import Image from "next/image";
-import neil_and_romi from "./neil_and_romi.jpg";
+import neil_warsaw from "./Neil_Warsaw.jpg";
 import jadeSunset from "./Jade_Sunset.webp";
 import styles from "./about.module.scss";
 import theCats from "./The_Cats.jpg";
@@ -9,6 +9,7 @@ export default function About() {
     <>
       <main className="container">
         <h1>About Us</h1>
+
         <section className={styles.aboutSection}>
           <div>
             <h2>
@@ -34,7 +35,7 @@ export default function About() {
           </div>
 
           <Image
-            src={neil_and_romi}
+            src={neil_warsaw}
             alt="A photo of a man (Neil) wearing glasses and a t-shirt, with a cat on his lap."
           />
         </section>
@@ -62,7 +63,7 @@ export default function About() {
         <section className={styles.aboutSection}>
           <div>
             <h2>
-              <mark>The animals, Grigio and Romana</mark>
+              <mark>The cats, Grigio and Romana</mark>
             </h2>
             <p>
               Grigio (left, fluffy, one braincell) and Romana (right, shorthair,
