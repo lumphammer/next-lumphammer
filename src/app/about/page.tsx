@@ -2,6 +2,7 @@ import Image from "next/image";
 import neil_and_romi from "./neil_and_romi.jpg";
 import jadeSunset from "./Jade_Sunset.webp";
 import styles from "./about.module.scss";
+import theCats from "./The_Cats.jpg";
 
 export default function About() {
   return (
@@ -29,7 +30,7 @@ export default function About() {
               startups and established companies alike, and has never stopped
               playing TTRPGs.
             </p>
-            <p>Neil lives alone with his wife Jade, and two cats.</p>
+            <p>Neil lives with his wife Jade, and two cats.</p>
           </div>
 
           <Image
@@ -39,20 +40,60 @@ export default function About() {
         </section>
 
         <hr />
-        <h2>
-          <mark>Jade</mark>
-        </h2>
         <section className={styles.aboutSection}>
           <div>
+            <h2>
+              <mark>Jade</mark>
+            </h2>
             <p>
               Jade has never played a single TTRPG in her entire life, but she
               has many useful skills, including putting up with Neil,
               proofreading, and admin.
             </p>
-            <p>Jade lives alone with her husband Neil, and two cats.</p>
+            <p>Jade lives with her husband Neil, and two cats.</p>
           </div>
           <Image
             src={jadeSunset}
+            alt="A photo of Jade with a sunset in the background."
+            className="about-image"
+          />
+        </section>
+        <hr />
+        <section className={styles.aboutSection}>
+          <div>
+            <h2>
+              <mark>The animals, Grigio and Romana</mark>
+            </h2>
+            <p>
+              Grigio (left, fluffy, one braincell) and Romana (right, shorthair,
+              too smart) are both rescues from UAE. Grigio was dumped in a car
+              park and Romana was abandoned in the lobby of an apartment block
+              for days.
+            </p>
+            <p>
+              Romana and Grigio now live with each other and two human servants.
+            </p>
+            <p>
+              If you&apos;re curious about adopting a cat from UAE, check out
+              the{" "}
+              <a
+                target="_blank"
+                href="https://www.instagram.com/fur_family11.11?igsh=NzRiOGQzdGMzNDd1"
+              >
+                Fur Family
+              </a>{" "}
+              Instagram page or the{" "}
+              <a
+                target="_blank"
+                href="https://www.instagram.com/pawsomexlove?igsh=YWxyYzNsc3ZraHNw"
+              >
+                Pawsome Love
+              </a>{" "}
+              Instagram page.
+            </p>
+          </div>
+          <Image
+            src={theCats}
             alt="A photo of Jade with a sunset in the background."
             className="about-image"
           />
