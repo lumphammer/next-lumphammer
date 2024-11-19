@@ -62,7 +62,7 @@ export default function Portfolio() {
             </strong>
           </p>
           <p>
-            This projects was started as personal/fan project in 2021.{" "}
+            This project was started as personal/fan project in 2021.{" "}
             <a target="_blank" href="https://pelgranepress.com/">
               Pelgrane Press
             </a>{" "}
