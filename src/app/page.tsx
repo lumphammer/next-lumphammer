@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./home.module.scss";
 import TripleChevron from "@/components/TripleChevron";
 import Logo from "@/assets/Logo.svg";
+import { ThemeSwitcherLink } from "@/components/ThemeSwitcherLink";
 
 // import Link from "next/link";
 
@@ -42,6 +43,9 @@ export default function Home() {
               Get in <mark>touch</mark>
               <TripleChevron />
             </Link>
+          </li>
+          <li>
+            <ThemeSwitcherLink />
           </li>
         </ul>
       </div>

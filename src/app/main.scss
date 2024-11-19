@@ -27,6 +27,7 @@
   --lumphammer-menu-background: #{$sand-50}77;
   --lumphammer-color: #{$sand-900};
   --lumphammer-header-background-color: #{$sand-150};
+  --pico-muted-border-color: #{$sand-250};
 }
 
 @include dark-theme("&") {
@@ -47,6 +48,7 @@
     --pico-box-shadow: 0 0 2em #{$cyan-350};
   }
   --lumphammer-header-background-color: #{$sand-850};
+  --pico-muted-border-color: #{$grey-650};
 
   a {
     // border: 100px solid transparent;

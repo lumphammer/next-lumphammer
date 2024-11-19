@@ -27,3 +27,55 @@
     display: inline;
   }
 }
+
+.themeSwitcherLink {
+  font-size: 0.8rem;
+  svg {
+    font-size: 2em;
+    vertical-align: middle;
+  }
+}
+
+.switchLight {
+  display: none;
+  :root:not([data-theme])[data-system-theme="dark"] & {
+    display: inline;
+  }
+  :root[data-theme="dark"][data-system-theme="light"] & {
+    display: inline;
+  }
+}
+
+.switchDark {
+  display: none;
+  :root:not([data-theme])[data-system-theme="light"] & {
+    display: inline;
+  }
+  :root[data-theme="light"][data-system-theme="dark"] & {
+    display: inline;
+  }
+}
+
+.switchSystem {
+  display: none;
+  :root[data-theme="light"][data-system-theme="light"] & {
+    display: inline;
+  }
+  :root[data-theme="dark"][data-system-theme="dark"] & {
+    display: inline;
+  }
+}
+
+.switchSystemDark {
+  display: none;
+  :root[data-system-theme="dark"] & {
+    display: inline;
+  }
+}
+
+.switchSystemLight {
+  display: none;
+  :root[data-system-theme="light"] & {
+    display: inline;
+  }
+}

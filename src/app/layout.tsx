@@ -15,6 +15,10 @@ export const metadata: Metadata = {
 
 function setThemeBeforePageDraws() {
   const storedTheme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+  document.documentElement.setAttribute("data-system-theme", systemTheme);
   if (storedTheme) {
     console.log("setting theme", storedTheme);
     document.documentElement.setAttribute("data-theme", storedTheme);

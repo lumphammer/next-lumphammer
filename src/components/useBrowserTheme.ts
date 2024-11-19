@@ -1,11 +1,7 @@
-"use client";
+import { useCallback } from "react";
 
-import { FaSun, FaMoon, FaDesktop } from "react-icons/fa6";
-import styles from "./themeSwitcher.module.scss";
-import { useCallback, useEffect } from "react";
-
-export function ThemeSwitcher() {
-  const handleMouseDown = useCallback(() => {
+export default function useCycleBrowserTheme() {
+  const handleCycleTheme = useCallback(() => {
     const storedTheme = document.documentElement.getAttribute("data-theme");
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
       .matches
@@ -38,27 +34,5 @@ export function ThemeSwitcher() {
     }
   }, []);
 
-  // Initialize theme on mount
-  useEffect(() => {
-    setTimeout(() => {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme && savedTheme !== "system") {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-      }
-    }, 100);
-  }, []);
-
-  return (
-    <a
-      href="#"
-      className={styles.themeSwitcher}
-      onMouseDown={handleMouseDown}
-      onClick={(e) => e.preventDefault()}
-      tabIndex={0}
-    >
-      <FaSun className={styles.sun} aria-label="Toggle light theme" />
-      <FaMoon className={styles.moon} aria-label="Toggle dark theme" />
-      <FaDesktop className={styles.system} aria-label="Toggle system theme" />
-    </a>
-  );
+  return { handleCycleTheme };
 }
