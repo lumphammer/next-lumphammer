@@ -158,11 +158,15 @@ export default function Portfolio() {
             HTML by hand, so of course he built this website himself.
           </p>
           <p>
-            <small>
-              (There&apos;s a <Link href="/colophon">Colophon</Link> too, if you
-              want to know the what this site is made of in unnecessary and
-              frankly gory detail.)
-            </small>
+            Because people sometimes ask - here&apos;s{" "}
+            <Link href="/why-lumphammer">
+              why I chose the name &quot;Lumphammer&quot;
+            </Link>
+          </p>
+          <p>
+            There&apos;s a <Link href="/colophon">Colophon</Link>, if you want
+            to know the what this site is made of in unnecessary and frankly
+            indulgent detail.
           </p>
         </article>
         <article>
