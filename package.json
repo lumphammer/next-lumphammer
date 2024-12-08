@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "15.0.3",
+    "next": "15.0.4",
     "posthog-js": "^1.194.3",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
@@ -22,7 +22,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^8.57.1",
-    "eslint-config-next": "15.0.3",
+    "eslint-config-next": "15.0.4",
     "sass-embedded": "^1.81.1",
     "typescript": "^5.7.2"
   },
