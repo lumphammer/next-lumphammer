@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "15.0.4",
-    "posthog-js": "^1.194.3",
+    "posthog-js": "^1.195.0",
     "react": "19.0.0-rc-fb9a90fa48-20240614",
     "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
     "react-icons": "^5.4.0"
