@@ -13,7 +13,7 @@ export default function Home() {
       <div className={styles.hook}>
         <Logo aria-hidden={true} className={styles.logo} />
 
-        <h1>
+        <h1 style={{ lineHeight: "1.3em" }}>
           <mark>Bespoke software development</mark> for the{" "}
           <mark>TTRPG industry</mark>
         </h1>
