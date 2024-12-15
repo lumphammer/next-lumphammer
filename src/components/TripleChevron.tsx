@@ -1,6 +1,7 @@
 export default function TripleChevron() {
   return (
     <svg
+      aria-hidden={true}
       width="24"
       height="24"
       viewBox="0 0 28 14"

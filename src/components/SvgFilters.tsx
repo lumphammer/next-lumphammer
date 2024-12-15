@@ -5,6 +5,7 @@ export default function SvgFilters() {
       height="0"
       viewBox="0 0 600 200"
       style={{ position: "absolute", top: 0, left: 0 }}
+      aria-hidden={true}
     >
       <defs>
         {/* SOFT FOCUS */}
