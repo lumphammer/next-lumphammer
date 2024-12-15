@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="container">
       <div className={styles.hook}>
-        <Logo className={styles.logo} />
+        <Logo aria-hidden={true} className={styles.logo} />
 
         <h1>
           <mark>Bespoke software development</mark> for the{" "}
