@@ -12,8 +12,8 @@
   @include light-theme(&) {
     filter: drop-shadow(0.05em 0.05em 0.05em #fff)
       drop-shadow(0.1em 0.1em 0.1em #0004);
-    --lumphammer-logo-svg-color: #{$cyan-700};
-    color: #{$cyan-600};
+    --lumphammer-logo-svg-color: #{$cyan-750};
+    color: #{$cyan-650};
   }
   @include dark-theme(&) {
     filter: drop-shadow(0 0 0.5em var(--pico-primary));
