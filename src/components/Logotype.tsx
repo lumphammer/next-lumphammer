@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Logotype() {
   return (
     <Link href="/" className={styles.logotype}>
-      <Logo width={50} />
+      <Logo aria-label="Lumphammer logo" width={50} />
       <div className={styles.text}>Lumphammer</div>
     </Link>
   );
