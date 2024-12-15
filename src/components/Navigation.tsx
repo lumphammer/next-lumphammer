@@ -60,6 +60,7 @@ export function Navigation() {
         <div
           className={`mobile-menu ${fadingOut ? "fade-out" : ""}`}
           role="dialog"
+          aria-label="Navigation menu"
           aria-modal="true"
         >
           <OnNavigateContext.Provider value={closeMenu}>
