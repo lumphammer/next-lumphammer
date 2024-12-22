@@ -28,12 +28,12 @@ export function Navigation() {
   }, [isOpen, closeMenu]);
 
   const links = (
-    <ul>
+    <>
       <NavigationLink to="/">Home</NavigationLink>
       <NavigationLink to="/projects">Projects</NavigationLink>
       <NavigationLink to="/about">About</NavigationLink>
       <NavigationLink to="/contact">Contact</NavigationLink>
-    </ul>
+    </>
   );
 
   return (
