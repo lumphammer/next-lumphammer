@@ -29,14 +29,12 @@ export function NavigationLink({ to, children }: NavigationLinkProps) {
   );
 
   return (
-    <li>
-      <Link
-        href={to}
-        aria-current={to === pathName ? "page" : undefined}
-        onMouseDown={handleMouseDown}
-      >
-        {children}
-      </Link>
-    </li>
+    <Link
+      href={to}
+      aria-current={to === pathName ? "page" : undefined}
+      onMouseDown={handleMouseDown}
+    >
+      {children}
+    </Link>
   );
 }
