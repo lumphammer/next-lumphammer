@@ -65,7 +65,9 @@ nav {
     }
   }
 
-  .mobile-menu-content {
+  .mobile-menu-content,
+  .mobile-menu-content ul {
+    // background: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
