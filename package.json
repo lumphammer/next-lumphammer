@@ -12,8 +12,8 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "15.1.0",
-    "posthog-js": "^1.200.1",
+    "next": "15.1.2",
+    "posthog-js": "^1.203.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-icons": "^5.4.0",
@@ -24,14 +24,14 @@
     "@picocss/pico": "^2.0.6",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.10.2",
-    "@types/react": "^19.0.1",
+    "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "eslint": "^8.57.1",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "15.1.2",
     "sass-embedded": "^1.83.0",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
   "cacheDirectories": [
     "node_modules",
     ".next/cache"
