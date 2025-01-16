@@ -31,7 +31,8 @@ export function Navigation() {
     <>
       <NavigationLink to="/">Home</NavigationLink>
       <NavigationLink to="/projects">Projects</NavigationLink>
-      <NavigationLink to="/blog">Blog</NavigationLink>
+      {/* enable this when ready */}
+      {/* <NavigationLink to="/blog">Blog</NavigationLink> */}
       <NavigationLink to="/about">About</NavigationLink>
       <NavigationLink to="/contact">Contact</NavigationLink>
     </>
