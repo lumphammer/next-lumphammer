@@ -13,25 +13,25 @@
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
     "next": "15.1.7",
-    "posthog-js": "^1.219.3",
+    "posthog-js": "^1.223.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-icons": "^5.4.0",
+    "react-icons": "^5.5.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
     "@picocss/pico": "^2.0.6",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^22.13.4",
+    "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "eslint": "^8.57.1",
     "eslint-config-next": "15.1.7",
-    "sass-embedded": "^1.85.0",
+    "sass-embedded": "^1.85.1",
     "typescript": "^5.7.3"
   },
-  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "packageManager": "pnpm@10.5.0+sha512.11106a5916c7406fe4b8cb8e3067974b8728f47308a4f5ac5e850304afa6f57e2847d7950dfe78877d8d36bfb401d381c4215db3a4c3547ffa63c14333a6fa51",
   "cacheDirectories": [
     "node_modules",
     ".next/cache"
