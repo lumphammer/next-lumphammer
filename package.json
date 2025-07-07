@@ -12,8 +12,8 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "15.3.4",
-    "posthog-js": "^1.255.1",
+    "next": "15.3.5",
+    "posthog-js": "^1.256.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
@@ -23,11 +23,11 @@
   "devDependencies": {
     "@picocss/pico": "^2.1.1",
     "@svgr/webpack": "^8.1.0",
-    "@types/node": "^22.15.34",
+    "@types/node": "^22.16.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "eslint": "^8.57.1",
-    "eslint-config-next": "15.3.4",
+    "eslint-config-next": "15.3.5",
     "sass-embedded": "^1.89.2",
     "typescript": "^5.8.3"
   },
