@@ -18,8 +18,8 @@ importers:
         specifier: 15.3.5
         version: 15.3.5(@babel/core@7.26.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.80.7)
       posthog-js:
-        specifier: ^1.256.2
-        version: 1.256.2(@rrweb/types@2.0.0-alpha.17)
+        specifier: ^1.257.0
+        version: 1.257.0(@rrweb/types@2.0.0-alpha.17)
       react:
         specifier: 19.1.0
         version: 19.1.0
@@ -43,8 +43,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.8.3)
       '@types/node':
-        specifier: ^22.16.0
-        version: 22.16.0
+        specifier: ^22.16.3
+        version: 22.16.3
       '@types/react':
         specifier: ^19.1.8
         version: 19.1.8
@@ -1055,8 +1055,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@22.16.0':
-    resolution: {integrity: sha512-B2egV9wALML1JCpv3VQoQ+yesQKAmNMBIAY7OteVrikcOcAkWm+dGL6qpeCktPjAv6N1JLnhbNiqS35UpFyBsQ==}
+  '@types/node@22.16.3':
+    resolution: {integrity: sha512-sr4Xz74KOUeYadexo1r8imhRtlVXcs+j3XK3TcoiYk7B1t3YRVJgtaD3cwX73NYb71pmVuMLNRhJ9XKdoDB74g==}
 
   '@types/react-dom@19.1.6':
     resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
@@ -2257,8 +2257,8 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  posthog-js@1.256.2:
-    resolution: {integrity: sha512-ypepnUHr33i5a1Uk39mozZXXTENRPC17HCG3WHKK6aRcpNwNs8uEqXaIKICGNM+qre+totKeTgl0WoaUFYmyoQ==}
+  posthog-js@1.257.0:
+    resolution: {integrity: sha512-Ujg9RGtWVCu+4tmlRpALSy2ZOZI6JtieSYXIDDdgMWm167KYKvTtbMPHdoBaPWcNu0Km+1hAIBnQFygyn30KhA==}
     peerDependencies:
       '@rrweb/types': 2.0.0-alpha.17
       rrweb-snapshot: 2.0.0-alpha.17
@@ -3910,7 +3910,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@22.16.0':
+  '@types/node@22.16.3':
     dependencies:
       undici-types: 6.21.0
 
@@ -5427,7 +5427,7 @@ snapshots:
       source-map-js: 1.2.1
     optional: true
 
-  posthog-js@1.256.2(@rrweb/types@2.0.0-alpha.17):
+  posthog-js@1.257.0(@rrweb/types@2.0.0-alpha.17):
     dependencies:
       core-js: 3.39.0
       fflate: 0.4.8
