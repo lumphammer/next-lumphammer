@@ -12,8 +12,8 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "15.4.2",
-    "posthog-js": "^1.257.1",
+    "next": "15.4.4",
+    "posthog-js": "^1.258.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
@@ -27,7 +27,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "eslint": "^8.57.1",
-    "eslint-config-next": "15.4.2",
+    "eslint-config-next": "15.4.4",
     "sass-embedded": "^1.89.2",
     "typescript": "^5.8.3"
   },
