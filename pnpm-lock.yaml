@@ -18,8 +18,8 @@ importers:
         specifier: 16.0.1
         version: 16.0.1(@babel/core@7.26.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(sass@1.93.3)
       posthog-js:
-        specifier: ^1.284.0
-        version: 1.284.0
+        specifier: ^1.290.0
+        version: 1.290.0
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -43,8 +43,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0(typescript@5.9.3)
       '@types/node':
-        specifier: ^24.9.2
-        version: 24.9.2
+        specifier: ^24.10.0
+        version: 24.10.0
       '@types/react':
         specifier: ^19.2.2
         version: 19.2.2
@@ -965,8 +965,8 @@ packages:
   '@picocss/pico@2.1.1':
     resolution: {integrity: sha512-kIDugA7Ps4U+2BHxiNHmvgPIQDWPDU4IeU6TNRdvXQM1uZX+FibqDQT2xUOnnO2yq/LUHcwnGlu1hvf4KfXnMg==}
 
-  '@posthog/core@1.5.0':
-    resolution: {integrity: sha512-oxfV20QMNwH30jKybUyqi3yGuMghULQz1zkJgQG3rjpHDxhD2vDN6E7UpmaqgphMIvGG3Q+DgfU10zfSPA7w7w==}
+  '@posthog/core@1.5.2':
+    resolution: {integrity: sha512-iedUP3EnOPPxTA2VaIrsrd29lSZnUV+ZrMnvY56timRVeZAXoYCkmjfIs3KBAsF8OUT5h1GXLSkoQdrV0r31OQ==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1071,8 +1071,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@24.9.2':
-    resolution: {integrity: sha512-uWN8YqxXxqFMX2RqGOrumsKeti4LlmIMIyV0lgut4jx7KQBcBiW6vkDtIBvHnHIquwNfJhk8v2OtmO8zXWHfPA==}
+  '@types/node@24.10.0':
+    resolution: {integrity: sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==}
 
   '@types/react-dom@19.2.2':
     resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
@@ -1353,6 +1353,10 @@ packages:
 
   cross-spawn@7.0.4:
     resolution: {integrity: sha512-9KdyVPPtLHjPAD7tcuzSFs64UfHlLJt7U6qP4/bFVLyjLceyizj6s6jO6YBaV5d0G7g/9KnY/dOpLR4Rcg8YDg==}
+    engines: {node: '>= 8'}
+
+  cross-spawn@7.0.6:
+    resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
   css-select@5.1.0:
@@ -2305,8 +2309,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  posthog-js@1.284.0:
-    resolution: {integrity: sha512-GmycRGKWdTO6gUSMn8qzzoVTryQhxVwjK2y1Mn0eV7kldLS+tZhr/wM+Z8fXBkbrRwWUjofKFgB83gd1WzbJrA==}
+  posthog-js@1.290.0:
+    resolution: {integrity: sha512-zavBwZkf+3JeiSDVE7ZDXBfzva/iOljicdhdJH+cZoqp0LsxjKxjnNhGOd3KpAhw0wqdwjhd7Lp1aJuI7DXyaw==}
 
   preact@10.25.0:
     resolution: {integrity: sha512-6bYnzlLxXV3OSpUxLdaxBmE7PMOu0aR3pG6lryK/0jmvcDFPlcXGQAt5DpK3RITWiDrfYZRI0druyaK/S9kYLg==}
@@ -3881,7 +3885,9 @@ snapshots:
 
   '@picocss/pico@2.1.1': {}
 
-  '@posthog/core@1.5.0': {}
+  '@posthog/core@1.5.2':
+    dependencies:
+      cross-spawn: 7.0.6
 
   '@rtsao/scc@1.1.0': {}
 
@@ -4000,7 +4006,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@24.9.2':
+  '@types/node@24.10.0':
     dependencies:
       undici-types: 7.16.0
 
@@ -4340,6 +4346,12 @@ snapshots:
       typescript: 5.9.3
 
   cross-spawn@7.0.4:
+    dependencies:
+      path-key: 3.1.1
+      shebang-command: 2.0.0
+      which: 2.0.2
+
+  cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -5577,9 +5589,9 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  posthog-js@1.284.0:
+  posthog-js@1.290.0:
     dependencies:
-      '@posthog/core': 1.5.0
+      '@posthog/core': 1.5.2
       core-js: 3.39.0
       fflate: 0.4.8
       preact: 10.25.0
