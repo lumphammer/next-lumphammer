@@ -12,7 +12,7 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "16.0.6",
+    "next": "16.0.7",
     "posthog-js": "^1.299.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
