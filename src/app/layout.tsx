@@ -20,7 +20,7 @@ function setThemeBeforePageDraws() {
     ? "dark"
     : "light";
   document.documentElement.setAttribute("data-system-theme", systemTheme);
-  if (storedTheme) {
+  if (storedTheme === "light" || storedTheme === "dark") {
     console.log("setting theme", storedTheme);
     document.documentElement.setAttribute("data-theme", storedTheme);
   }
