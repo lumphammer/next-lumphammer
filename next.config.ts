@@ -32,13 +32,11 @@ const nextConfig: NextConfig = {
     return config;
   },
   // https://nextjs.org/docs/app/api-reference/next-config-js/turbo#supported-loaders
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.js",
-        },
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
     },
   },
