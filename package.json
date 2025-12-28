@@ -12,8 +12,8 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "16.0.10",
-    "posthog-js": "^1.306.1",
+    "next": "16.1.1",
+    "posthog-js": "^1.310.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-icons": "^5.5.0",
@@ -27,8 +27,8 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^8.57.1",
-    "eslint-config-next": "16.0.10",
-    "sass-embedded": "^1.96.0",
+    "eslint-config-next": "16.1.1",
+    "sass-embedded": "^1.97.1",
     "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
